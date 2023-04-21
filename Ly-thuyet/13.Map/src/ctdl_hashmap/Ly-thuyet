@@ -1,0 +1,45 @@
+Các phương thức của HashMap trong Java tương tự với các phương thức của interface Map, bao gồm:
+
+put(key, value): thêm một cặp key-value vào HashMap.
+
+get(key): lấy giá trị value tương ứng với key.
+
+containsKey(key): kiểm tra xem key có tồn tại trong HashMap hay không.
+
+containsValue(value): kiểm tra xem value có tồn tại trong HashMap hay không.
+
+remove(key): xoá một cặp key-value khỏi HashMap.
+
+size(): lấy số lượng các cặp key-value trong HashMap.
+
+keySet(): trả về tập hợp các key có trong HashMap.
+
+values(): trả về tập hợp các value có trong HashMap.
+
+entrySet(): trả về tập hợp các cặp key-value có trong HashMap.
+
+clear()
+
+isEmpty() kiểm tra map có rỗng không
+
+replaceAll() tất cả các value của map hiện có key sẽ đều được thay đổi hết
+
+computeIfAbsent() tạo ra một phần tử mới có key được xác định bởi hàm computeIfAbsent còn value là kết quả của việc áp dụng ánh xạ hàm (function)
+và biểu thức lambda
+
+computeIfPresent() nếu key tồn tại thì sẽ thay đổi giá trị value của key đó phụ thuộc vào biểu thức lambda (k,v)-> còn ngược lại thì ko làm gì
+
+compute() tổng hợp của computeIfAbsent và computeIfPresent
+ 
+merge() có hai dạng, dạng 1 thì không khác gì compute nhưng có nhiều cách viết khác nhau mang ý nghĩa khác nhau(=>xem file merge.java để tìm hiểu thêm...)
+
+merge() Các phép toán merge của map cho phép ta thực hiện các thao tác như gộp hai map để tạo ra một map lớn hơn, hoặc cập nhật map ban đầu bằng các
+giá trị mới từ một map khác. Nó cũng có thể được sử dụng để tính toán kết quả từ nhiều nguồn dữ liệu khác nhau, chẳng hạn như trong trường hợp tính toán
+đa luồng (multi-threading).
+
+putIfAbsent() trả về giá trị hiện tại của khóa nếu khóa đã tồn tại hoặc null, nếu khóa chưa tồn tại thì phần tử mới được thêm thành công
+
+getOrDefault() trả về giá trị chúng ta quy định (giá trị mặc định) nếu không tồn tại giá trị đó
+
+replace() value tương ứng của key được xác định bởi hàm sẽ được thay đổi tương ứng xác định bởi hàm
+

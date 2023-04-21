@@ -1,0 +1,19 @@
+ConcurrentHashMap
+
+1. ConcurrentHashMap cung cấp khả năng đọc ghi đa luồng nên hoàn toàn có thể đọc ghi đồng thời trên một collection (ví dụ như sửa, xóa, ..) 
+
+2. Trong ConcurrentHashMap mỗi phần tử được chứa trong một khóa (lock) riêng biệt. Chính vì vậy khi một thread thực hiện thêm sửa xóa một phần tử
+chỉ có khóa chứa phần tử đó được khóa lại để tránh xung đột với các thread khác. Nên các khóa khác vẫn có thể được truy cập và thay đổi bình thường.
+Chính vì vậy nếu sử dụng ConcurrentHashMap thì việc sử dụng Synchronized là không cần thiết nữa
+=> vậy thì Synchronized là gì??
+Synchronized là một cơ chế đồng bộ hóa trong Java (Synchronization) giúp đảm tính toàn vẹn của dữ liệu khi nhiều thread truy cập vào cùng một đối tượng (object)
+Khi một phương thức được đánh dấu là synchronized thì chỉ có một thread thực thi phương thức đó tại một thời điểm, và  các thread khác sẽ bị block (đợi) cho đến 
+khi thread hoàn thành phương thức đó
+
+3. ConcurrentHashMap cung cấp một số phương thức để tạo Iterator và Spliterator cho các hoạt động duyệt, nhưng bạn cần phải lưu ý rằng chúng chỉ trả về một 
+ảnh chụp (snapshot) của ConcurrentHashMap tại thời điểm tạo Iterator hoặc Spliterator. Nếu các phần tử trong ConcurrentHashMap bị thay đổi trong khi 
+bạn đang duyệt, bạn có thể gặp lỗi ConcurrentModificationException.
+
+4. Mặc dù ConcurrentHashMap hỗ trợ đọc/ghi đồng thời, tuy nhiên, việc sử dụng nhiều thread để thực hiện các hoạt động trên ConcurrentHashMap có thể dẫn đến 
+hiện tượng đua tài nguyên (resource contention) và giảm hiệu suất của ứng dụng. Do đó, bạn cần cân nhắc kỹ lưỡng trước khi sử dụng ConcurrentHashMap 
+và chọn phương án tối ưu nhất để đảm bảo hiệu suất và tính nhất quán của dữ liệu.
