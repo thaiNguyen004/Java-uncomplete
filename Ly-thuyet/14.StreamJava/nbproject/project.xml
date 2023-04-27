@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>17.StreamJava</name>
+            <name>14.StreamJava</name>
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

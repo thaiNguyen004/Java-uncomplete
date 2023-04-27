@@ -3,13 +3,13 @@
  *
  * <Nhập mô tả tại đây>
  */
-package objectclassmethods;
+package wait_notify;
 
 /**
- *
+ * Do chưa học về thread nên bài này chưa học
  * @author nguye
  */
-public class ObjectClassMethods {
+public class example {
 
     /**
      * @param args the command line arguments
