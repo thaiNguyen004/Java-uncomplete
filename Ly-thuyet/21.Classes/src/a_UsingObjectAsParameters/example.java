@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package UsingObjectAsParameters;
+package a_UsingObjectAsParameters;
 
 /*
     Cho đến nay, chúng ta chỉ sử dụng các loại đơn giản như tham số cho các phương thức.

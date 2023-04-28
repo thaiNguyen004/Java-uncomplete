@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package PassingArgument;
+package b_PassingArgument;
 
 class Test {
     static void meth (int i, int j){

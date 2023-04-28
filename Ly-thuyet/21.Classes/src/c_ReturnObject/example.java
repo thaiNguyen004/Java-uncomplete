@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package ReturnObject;
+package c_ReturnObject;
 
 /**
  * Một phương thức có thể trả về bất kỳ loại dữ liệu nào, kể cả các loại lớp mà bạn tạo.

@@ -1,0 +1,38 @@
+>= Java 10
+    Như bạn đã thấy trong Chương 3, bắt đầu từ JDK 10, Java hỗ trợ local variable type inference. 
+Nhớ lại rằng khi sử dụng local variable type inference, kiểu của biến được chỉ định là var 
+và biến phải được khởi tạo giá trị ban đầu. Các ví dụ trước đó đã cho thấy type inference 
+với các kiểu nguyên thủy, nhưng nó cũng có thể được sử dụng với các kiểu tham chiếu. 
+Trong thực tế, type inference với các kiểu tham chiếu là một ứng dụng chính của nó. 
+Đây là một ví dụ đơn giản - Xem trong file example.java
+
+    Như được giải thích trong Chương 3, một trong những lợi ích của local variable type inference 
+là khả năng tối giản mã, và điều này được thể hiện rõ nhất với các kiểu dữ liệu tham chiếu. 
+Lý do cho điều này là nhiều kiểu lớp trong Java có tên khá dài. 
+Ví dụ, trong Chương 13, bạn sẽ tìm hiểu về lớp FileInputStream, được sử dụng để mở một tệp tin 
+để thực hiện các hoạt động đầu vào. Trước đây, bạn sẽ khai báo và khởi tạo một FileInputStream 
+bằng cách sử dụng khai báo truyền thống như được hiển thị ở đây:
+    FileInputStream fin = new FileInputStream("text.txt");
+
+Với việc sủ dụng var bây giờ nó có thể viết như thế này: 
+    var fin = new FileInputStream("text.txt");
+
+    Kết quả là khai báo này của fin ngắn hơn đáng kể so với cách viết truyền thống. 
+Do đó, việc sử dụng var giúp tối giản hóa khai báo. Lợi ích này trở nên rõ ràng hơn 
+trong các khai báo phức tạp hơn, chẳng hạn như những khai báo liên quan đến generics. 
+Nói chung, tính tối giản hóa của local variable type inference giúp giảm bớt sự nhàm chán 
+khi nhập tên kiểu dài vào chương trình của bạn.
+
+Tất nhiên, tính tối giản của local variable type inference phải được sử dụng cẩn thận để 
+tránh làm giảm tính đọc hiểu của chương trình và, do đó, che giấu ý nghĩa của nó. 
+Ví dụ, hãy xem xét một khai báo như được hiển thị ở đây:
+
+var x = o.getNext();
+
+Trong trường hợp này, có thể không rõ ngay cho người đọc mã của bạn là kiểu của x là gì. 
+Về cơ bản, local variable type inference là một tính năng mà bạn nên sử dụng một cách khôn ngoan.
+
+Như bạn mong đợi, bạn cũng có thể sử dụng local variable type inference với các lớp được định nghĩa 
+bởi người dùng, như chương trình sau minh họa. Nó tạo ra một lớp gọi là MyClass và sau đó sử dụng 
+local variable type inference để khai báo và khởi tạo một đối tượng của lớp đó.
+Ví dụ này trong file example.java

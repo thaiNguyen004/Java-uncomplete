@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package ArraysRevisited;
+package e_ArraysRevisited;
 
 /* Ví dụ, đây là một phiên bản cải tiến của lớp Stack. Như bạn có thể nhớ, các phiên 
 bản trước của lớp này luôn tạo ra một stack chứa mười phần tử. 
@@ -18,7 +18,7 @@ class Stack {
         tos = -1;
     }
     void push (int item){
-        if(tos > stack.length - 1){
+        if(tos >= stack.length - 1){
             System.out.println("Full");
         }else{
             stack[++tos] = item;

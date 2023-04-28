@@ -1,0 +1,62 @@
+Để tạo một thread, bạn có thể tạo một lớp implements interface Runnable. 
+Interface Runnable trừu tượng một đơn vị mã có thể thực thi. Bạn có thể tạo một thread 
+trên bất kỳ đối tượng implements Runnable nào. Để implements Runnable, một lớp chỉ cần 
+triển khai một phương thức duy nhất gọi là run (), được khai báo như sau:
+
+public void run()
+
+Trong run (), bạn sẽ định nghĩa mã cấu thành thread mới. Quan trọng là hiểu rằng run () 
+có thể gọi các phương thức khác, sử dụng các lớp khác và khai báo biến, tương tự như thread main có thể làm. 
+Sự khác biệt duy nhất là run () thiết lập điểm nhập cho một thread thực thi song song khác trong chương trình của bạn. 
+Thread này sẽ kết thúc khi run () trả về.
+
+Sau khi tạo một lớp implements Runnable, bạn sẽ khởi tạo một đối tượng kiểu Thread từ bên trong lớp đó. 
+Thread định nghĩa một số constructor. Constructor mà chúng ta sẽ sử dụng được hiển thị ở đây:
+
+Thread(Runnable threadOb, String threadName)
+
+Trong constructor này, threadOb là một thể hiện của một lớp implements interface Runnable. 
+Điều này xác định nơi bắt đầu thực thi của thread. 
+Tên của thread mới được chỉ định bởi threadName.
+
+Sau khi thread mới được tạo, nó sẽ không bắt đầu chạy cho đến khi bạn gọi phương thức start () của nó, 
+được khai báo trong Thread. Về cơ bản, start () khởi động một cuộc gọi đến run (). 
+Phương thức start () được hiển thị ở đây:
+
+void start()
+
+Dưới đây là một ví dụ tạo một thread mới và bắt đầu chạy nó: file ImplementingRunale.java
+
+Trong hàm tạo của lớp NewThread, một đối tượng Thread mới được tạo bằng câu lệnh sau:
+
+t = new Thread(this, "Demo Thread");
+
+Tham số đầu tiên được truyền là `this`, cho biết bạn muốn luồng mới gọi phương thức `run()` trên đối tượng này. 
+Trong hàm `main()`, phương thức `start()` được gọi để bắt đầu luồng thực thi bằng cách bắt đầu từ phương thức `run()`. 
+Điều này khiến cho vòng lặp for của luồng con được bắt đầu. 
+
+Tiếp theo, luồng chính nhập vào vòng lặp for của nó. Cả hai luồng tiếp tục chạy, 
+chia sẻ CPU trong các hệ thống bộ xử lý đơn, cho đến khi vòng lặp của chúng kết thúc. 
+Kết quả được tạo ra bởi chương trình này như sau. 
+(Kết quả của bạn có thể khác nhau tùy thuộc vào môi trường thực thi cụ thể.)
+
+run:
+Child thread: Thread[Demo Thread,5,main]
+Child Thread: 5
+Main Thread: 5
+Child Thread: 4
+Main Thread: 4
+Child Thread: 3
+Child Thread: 2
+Main Thread: 3
+Child Thread: 1
+Exit child thread
+Main Thread: 2
+Main Thread: 1
+Exit main thread
+
+Như đã đề cập trước đó, trong một chương trình đa luồng, thường hữu ích khi luồng chính 
+là luồng cuối cùng kết thúc. Chương trình trước đó đảm bảo rằng luồng chính kết thúc cuối cùng, 
+vì luồng chính ngủ trong 1.000 mili giây giữa các vòng lặp, nhưng luồng con chỉ ngủ trong 500 mili giây. 
+Điều này làm cho luồng con kết thúc sớm hơn luồng chính. 
+Sắp tới, bạn sẽ thấy một cách tốt hơn để đợi cho một luồng kết thúc.
