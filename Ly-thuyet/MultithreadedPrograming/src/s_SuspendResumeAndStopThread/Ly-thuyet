@@ -1,0 +1,33 @@
+Đôi khi, việc tạm dừng việc thực thi của một luồng là hữu ích. 
+Ví dụ, một luồng riêng có thể được sử dụng để hiển thị giờ trong ngày. 
+Nếu người dùng không muốn có đồng hồ, thì luồng này có thể bị tạm dừng. 
+Dù cho trường hợp nào, tạm dừng một luồng là một vấn đề đơn giản. Sau khi tạm dừng, 
+khởi động lại luồng cũng là một vấn đề đơn giản. 
+
+Các cơ chế để tạm dừng, dừng và tiếp tục luồng khác nhau giữa các phiên bản Java, 
+từ Java 1.0 và phiên bản mới hơn bắt đầu từ Java 2. 
+Trước Java 2, một chương trình sử dụng suspend (), resume (), và stop (), là các 
+phương thức được định nghĩa bởi lớp Thread, để tạm dừng, khởi động lại và dừng thực thi của một luồng. 
+Mặc dù các phương thức này có vẻ là một cách tiếp cận hoàn toàn hợp lý và thuận tiện để quản lý 
+việc thực thi của các luồng, nhưng chúng không được sử dụng cho các chương trình Java mới. 
+Đây là lý do. Phương thức suspend () của lớp Thread đã bị loại bỏ bởi Java 2 từ nhiều năm trước. 
+Điều này đã được thực hiện vì suspend () đôi khi có thể gây ra các lỗi hệ thống nghiêm trọng. 
+Giả sử một luồng đã lấy khóa trên các cấu trúc dữ liệu quan trọng. Nếu luồng đó bị tạm dừng tại điểm đó, 
+những khóa đó sẽ không được nhả ra. Các luồng khác có thể đang chờ đợi tài nguyên đó có thể bị kẹt.
+
+Phương thức resume() cũng đã bị loại bỏ. Nó không gây ra vấn đề gì nhưng không thể sử dụng 
+mà không có phương thức suspend() làm đối tác của nó.
+
+Trong Java, phương thức stop() của lớp Thread được sử dụng để dừng ngay lập tức việc 
+thực thi của một thread. Tuy nhiên, phương thức này đã bị loại bỏ trong phiên bản Java 2 
+vì nó có thể gây ra các vấn đề nghiêm trọng trong hệ thống.
+
+Vấn đề chính với phương thức stop() đó là nó có thể gây ra một trạng thái không đồng bộ 
+giữa các luồng trong hệ thống. Ví dụ, nếu một thread đang thực hiện một hành động quan trọng 
+như ghi dữ liệu vào một cấu trúc dữ liệu quan trọng và phương thức stop() được gọi để dừng thread đó, 
+thì dữ liệu trong cấu trúc đó có thể bị lỗi do việc ghi chưa được hoàn thành. 
+Điều này có thể xảy ra nếu thread bị dừng giữa quá trình thực hiện một nhiệm vụ quan trọng.
+
+Hơn nữa, phương thức stop() có thể gây ra vấn đề liên quan đến sự đồng bộ hóa. 
+Khi một thread đang giữ một khóa, việc gọi phương thức stop() có thể khiến thread bị dừng lại mà 
+không giải phóng khóa đó. Điều này có thể dẫn đến tình trạng khóa tắc (deadlock) nếu các thread khác yêu cầu khóa đó.

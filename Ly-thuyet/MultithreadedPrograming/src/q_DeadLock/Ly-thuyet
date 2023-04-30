@@ -1,0 +1,23 @@
+Deadlock là một trạng thái mà hai hoặc nhiều luồng đang chờ đợi tài nguyên của nhau 
+để tiếp tục thực hiện, mà không có luồng nào sẵn sàng hoặc có thể giải phóng tài nguyên mà nó đang giữ. 
+Điều này dẫn đến một tình huống bế tắc, không có luồng nào có thể tiếp tục thực hiện và 
+các tài nguyên đang bị giữ bởi các luồng đó bị lãng phí. 
+
+Ví dụ, nếu có hai luồng A và B, luồng A giữ khóa của tài nguyên X và yêu cầu khóa 
+của tài nguyên Y, và luồng B giữ khóa của tài nguyên Y và yêu cầu khóa của tài nguyên X, 
+thì khi đó hai luồng sẽ bị kẹt lại vì cả hai đang chờ đợi tài nguyên mà đối phương đang giữ, 
+mà không ai có thể giải phóng tài nguyên của mình để cho đối phương tiếp tục thực hiện. 
+
+Deadlock là một lỗi khó khăn để phát hiện và khắc phục, và nó thường xảy ra khi có 
+nhiều luồng cùng truy cập vào các tài nguyên được đồng bộ hóa và xảy ra các xung đột khóa giữa chúng.
+
+Một loại lỗi đặc biệt mà bạn cần tránh liên quan đến đa nhiệm là deadlock, xảy ra khi hai 
+luồng có phụ thuộc vòng tròn trên một cặp đối tượng đồng bộ hóa. Ví dụ, giả sử một luồng 
+nhập vào monitor trên đối tượng X và một luồng khác nhập vào monitor trên đối tượng Y. 
+Nếu luồng trong X cố gắng gọi bất kỳ phương thức đồng bộ nào trên Y, nó sẽ bị chặn như mong đợi. 
+Tuy nhiên, nếu luồng trong Y, lần lượt, cố gắng gọi bất kỳ phương thức đồng bộ nào trên X, 
+luồng sẽ chờ mãi, bởi vì để truy cập X, nó phải giải phóng khóa của chính nó trên Y 
+để luồng đầu tiên có thể hoàn thành. Deadlock là một lỗi khó khăn để gỡ lỗi vì hai lý do:
+• Nó thường chỉ xảy ra đôi khi, khi hai luồng cắt nhau một cách hoàn hảo.
+• Nó có thể liên quan đến nhiều hơn hai luồng và hai đối tượng được đồng bộ hóa. 
+(Tức là, deadlock có thể xảy ra thông qua một chuỗi sự kiện phức tạp hơn so với mô tả chỉ vừa rồi.)
