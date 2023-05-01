@@ -9,7 +9,7 @@ package TryCatch;
  *
  * @author nguye
  */
-public class Finally {
+public class Example {
     /* Khi xảy ra lỗi, thực thi trong một phương thức sẽ đi theo một luồng không
     tuyến tính khá đột ngột và thay đổi luồng bình thường thông qua phương thức đó. 
     Tùy thuộc vào cách mà phương thức được viết, có thể thậm chí là lỗi có thể làm 

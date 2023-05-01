@@ -3,9 +3,9 @@
  *
  * <Nhập mô tả tại đây>
  */
-package TryCatch;
+package TryCatchWithMultipleCatches;
 
-class example {
+class Example {
 
     public void method() {
         //Ví dụ về sử dụng multiple catches block
@@ -70,7 +70,7 @@ class example {
 
 }
 
-public class TryCatchWithMultipleCatches {
+public class example {
 
     public static void main(String[] args) {
         /**

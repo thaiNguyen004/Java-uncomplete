@@ -5,11 +5,7 @@
  */
 package TryCatch;
 
-/**
- *
- * @author nguye
- */
-public class TryCatchWithOneCatchBlock {
+public class Example {
     public static void main(String[] args) {
         try {
             int a = Integer.parseInt("two");

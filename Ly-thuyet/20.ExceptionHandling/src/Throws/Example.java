@@ -9,7 +9,7 @@ package TryCatch;
  *
  * @author nguye
  */
-public class Throws {
+public class Example {
     
     /* Nếu một phương thức có thể gây ra một ngoại lệ mà nó không xử lý, thì phương
     thức đó phải chỉ định throws để người gọi của phương thức có thể bảo vệ chính mình

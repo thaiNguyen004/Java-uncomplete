@@ -9,7 +9,7 @@ package TryCatch;
  *
  * @author nguye
  */
-public class Throw {
+public class Example {
 
     /* Đến nay, bạn chỉ bắt các ngoại lệ được ném bởi hệ thống chạy Java. Tuy nhiên,
         chương trình của bạn có thể ném một ngoại lệ một cách rõ ràng bằng cách sử dụng

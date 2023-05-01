@@ -1,0 +1,109 @@
+Hãy xem xét chương trình này cẩn thận.
+Đầu tiên, hãy chú ý cách khai báo Gen bằng dòng code sau:
+class Gen<T> {
+Ở đây, T là tên của một tham số kiểu. 
+Tên này được sử dụng như một chỗ đại diện cho kiểu thực tế sẽ được truyền vào Gen 
+khi một đối tượng được tạo. Do đó, T được sử dụng trong Gen bất cứ khi nào cần thiết 
+tham số kiểu. Lưu ý rằng T nằm trong dấu <>. Cú pháp này có thể được tổng quát hóa. 
+Khi một tham số kiểu đang được khai báo, nó được chỉ định trong dấu ngoặc đơn. 
+Vì Gen sử dụng tham số kiểu, Gen là một lớp chung, còn được gọi là một loại được tham số hóa.
+(parameterized type)
+
+Trong khai báo của lớp Gen, không có ý nghĩa đặc biệt đối với tên T. Bất kỳ (định danh) identifier 
+hợp lệ nào đều có thể được sử dụng, nhưng T là truyền thống. Ngoài ra, nên sử dụng 
+chữ cái in hoa đơn giản làm tên tham số kiểu. Các tên tham số kiểu phổ biến khác là V và E. 
+Một điểm khác về tên tham số kiểu: Bắt đầu từ JDK 10, bạn không thể sử dụng var như là 
+tên tham số kiểu.
+
+Tiếp theo, T được sử dụng để khai báo một tham chiếu đối tượng được gọi là ob, như được 
+thể hiện ở đây:
+T ob; // khai báo một tham chiếu đối tượng kiểu T
+
+Như đã giải thích, T là một giá trị giữ chỗ cho kiểu thực tế sẽ được chỉ định khi một 
+đối tượng Gen được tạo. Do đó, ob sẽ là một đối tượng của kiểu được truyền cho T. 
+Ví dụ, nếu kiểu String được truyền cho T, thì trong trường hợp đó, ob sẽ có kiểu String.
+
+Bây giờ hãy xem xét hàm tạo của Gen:
+Gen (T o) {
+    ob = o;
+}
+
+Chú ý rằng tham số của nó, o, có kiểu T. Điều này có nghĩa là kiểu thực tế của o 
+sẽ được xác định bởi kiểu được chuyển đến T khi một đối tượng Gen được tạo. 
+Ngoài ra, vì cả tham số o và biến thành viên ob đều có kiểu T, chúng sẽ đều là cùng 
+một kiểu thực tế khi một đối tượng Gen được tạo.
+
+Tham số kiểu T cũng có thể được sử dụng để chỉ định kiểu trả về của một phương thức, 
+như trường hợp của phương thức getob(), được hiển thị ở đây:
+T getOb () {
+    return ob;
+}
+
+Vì ob cũng là kiểu T, nó tương thích với kiểu trả về được chỉ định bởi getob(). 
+Phương thức showType() hiển thị kiểu của T bằng cách gọi getName() trên đối tượng Class 
+được trả về bởi lời gọi getClass() trên ob. Phương thức getClass() được định nghĩa bởi 
+Object và do đó là thành viên của tất cả các loại lớp. Nó trả về một đối tượng Class 
+tương ứng với loại lớp của đối tượng trên đó nó được gọi. Lớp Class định nghĩa phương thức 
+getName(), trả về một chuỗi đại diện cho tên lớp.
+
+Lớp Example mô tả lớp Gen theo kiểu chung. Đầu tiên, nó tạo ra một phiên bản của Gen 
+cho số nguyên như được hiển thị ở đây:
+Gen<Integer> iOb;
+Nhìn kỹ vào khai báo này. Trước hết, lưu ý rằng kiểu Integer được chỉ định trong dấu ngoặc 
+nhọn sau Gen. Trong trường hợp này, Integer là một đối số kiểu được chuyển đến tham số kiểu T của Gen. 
+Điều này hiệu quả tạo ra một phiên bản của Gen trong đó tất cả các tham chiếu đến T 
+được dịch thành tham chiếu đến Integer. Do đó, đối tượng ob của phiên bản này là 
+kiểu Integer, và kiểu trả về của getob() cũng là kiểu Integer.
+
+Trước khi tiếp tục, cần phải nói rằng trình biên dịch Java không tạo ra các phiên bản 
+khác nhau của Gen, hoặc bất kỳ lớp kiểu chung nào khác. Mặc dù nó hữu ích để nghĩ theo 
+những thuật ngữ này, nhưng điều đó không phải là thực sự xảy ra. Thay vào đó, 
+trình biên dịch loại bỏ tất cả thông tin kiểu chung, thay thế các phép ép cần thiết, 
+để khiến mã của bạn hoạt động như thể một phiên bản cụ thể của Gen đã được tạo ra. 
+Do đó, thực sự chỉ có một phiên bản của Gen tồn tại trong chương trình của bạn. 
+Quá trình loại bỏ thông tin kiểu chung được gọi là xoá, 
+và chúng ta sẽ trở lại chủ đề này sau trong chương.
+
+Dòng tiếp theo gán cho iOb một tham chiếu tới một phiên bản của lớp Gen với kiểu Integer 
+như sau:
+iOb = new Gen<Integer>(88);
+Lưu ý rằng khi gọi hàm tạo của lớp Gen, kiểu đối số Integer cũng được chỉ định. 
+Điều này là do kiểu của đối tượng (trong trường hợp này là iOb) mà tham chiếu được gán 
+đến là kiểu Gen<Integer>. Do đó, tham chiếu được trả về bởi từ khóa new cũng phải là 
+kiểu Gen<Integer>. Nếu không phải, sẽ xảy ra lỗi tại thời điểm biên dịch. 
+Ví dụ, phép gán sau sẽ gây ra lỗi tại thời điểm biên dịch:
+iOb = new Gen<Double>(88.0); // Lỗi!
+Bởi vì iOb có kiểu là Gen<Integer>, nó không thể được sử dụng để tham chiếu tới một 
+đối tượng của lớp Gen<Double>. Kiểm tra kiểu này là một trong những lợi ích chính của generic vì nó đảm bảo tính an toàn về kiểu.
+
+LƯU Ý Như bạn sẽ thấy sau trong chương này, có thể rút ngắn cú pháp được sử dụng 
+để tạo một phiên bản của một lớp chung. Vì sự rõ ràng, chúng ta sẽ sử dụng cú pháp 
+đầy đủ vào thời điểm này.
+Như các chú thích trong chương trình cho biết, phép gán iOb = new Gen<Integer>(88); 
+sử dụng autoboxing để đóng gói giá trị 88, là một int, vào trong một Integer. 
+Điều này hoạt động bởi vì Gen<Integer> tạo một hàm dựng mà lấy một đối số Integer. 
+Vì một Integer được mong đợi, Java sẽ tự động đóng gói 88 vào bên trong một Integer. 
+Tất nhiên, phép gán cũng có thể được viết một cách rõ ràng như sau:
+
+iOb = new Gen<Integer>(Integer.valueOf(88));
+
+Tuy nhiên, không có lợi ích gì khi sử dụng phiên bản này.
+Sau đó, chương trình hiển thị kiểu của ob trong iOb là Integer.
+Tiếp theo, chương trình lấy giá trị của ob bằng cách sử dụng dòng sau:
+int v = iOb.getob();
+
+Chỉ vì kiểu trả về của phương thức getob() là T, được thay thế bằng Integer khi khai 
+báo iOb, kiểu trả về của phương thức getob() cũng là Integer, được unbox thành int 
+khi gán cho v (kiểu int). Do đó, không cần phải ép kiểu kiểu trả về của getob() 
+thành Integer. Tuy nhiên, không cần thiết phải sử dụng tính năng auto-unboxing. 
+Dòng trên có thể được viết như sau:
+
+int v = iOb.getob().intValue();
+
+Tuy nhiên, tính năng auto-unboxing giúp mã nguồn trở nên ngắn gọn hơn.
+Tiếp theo, GenDemo khai báo một đối tượng kiểu Gen<String>:
+Gen<String> strOb = new Gen<String>("Generics Test");
+Bởi vì đối số kiểu là String, String được thay thế cho T trong Gen. 
+Điều này tạo ra (trong khái niệm) một phiên bản của Gen cho kiểu String, 
+như các dòng còn lại trong chương trình chứng minh.
+

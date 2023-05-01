@@ -9,7 +9,7 @@ package TryCatch;
  *
  * @author nguye
  */
-public class NestedTryStatements {
+public class Example {
 
     /**
      * @param args the command line arguments
