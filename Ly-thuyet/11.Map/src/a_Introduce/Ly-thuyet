@@ -1,0 +1,25 @@
+• Map là một đối tượng lưu trữ các mối liên hệ giữa các khóa(key) và giá trị(value), 
+hoặc cặp khóa/giá trị. Với một khóa, bạn có thể tìm thấy giá trị tương ứng của nó. 
+Cả khóa và giá trị đều là các đối tượng. Các khóa phải là duy nhất, nhưng các giá trị 
+có thể bị trùng lặp. Một số bản đồ có thể chấp nhận khóa và giá trị null, 
+trong khi các bản đồ khác không thể.
+
+• Có một điểm chính về Map cần đề cập từ đầu: chúng không thực hiện giao diện Iterable.
+Đối với các cấu trúc dữ liệu khác như Collection (List, Set, Queue, ... ) thì có thực
+hiện giao diện Iterable sử dụng để định nghĩa các tập hợp dữ liệu mà có thể được lặp qua 
+bằng cách sử dụng một vòng lặp for-each hoặc trình lặp thông thường. Và Map thì có thể được lặp 
+thông qua các chế độ xem tập hợp như EntrySet, KeySet hoặc Values. Tuy nhiên từ Java 8 Map đã có thể
+lặp giống như các CTDL kia thông qua forEach sử dụng biểu thức lambda. Có thể nói thế này làm các bạn rối
+nhưng nên nhớ đây chỉ là giới thiệu, các bạn sẽ rõ về từng mục nhỏ này ngay trong chapter này
+
+The Map Interfaces
+Bởi vì các giao diện định nghĩa tính chất và bản chất của bản đồ, nên bàn về bản đồ bắt đầu từ các giao diện này. 
+Các giao diện sau hỗ trợ bản đồ:
+
+Interface               Description
+Map                     Maps(Ánh xạ) các khóa duy nhất tới các giá trị
+Map.Entry               Mô tả một phần tử (key/value) trong Map. Đây là một inner class của Map
+NavigableMap            Kế thừa SortedMap giúp sử lý việc truy xuất các mục dựa trên giá
+SortedMap               Kế thừa Map, lấy các key theo thứ tự tăng dần
+
+Từng interface sẽ được học ngay sau đây:))

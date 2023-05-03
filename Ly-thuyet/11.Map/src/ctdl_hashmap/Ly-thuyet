@@ -1,3 +1,4 @@
+THIẾU PHẦN GIẢI THÍCH HASHMAP VỚI MAP
 Các phương thức của HashMap trong Java tương tự với các phương thức của interface Map, bao gồm:
 
 put(key, value): thêm một cặp key-value vào HashMap.

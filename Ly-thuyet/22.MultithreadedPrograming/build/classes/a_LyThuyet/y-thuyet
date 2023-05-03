@@ -1,0 +1,43 @@
+Java cung cấp hỗ trợ tích hợp sẵn cho lập trình đa luồng. 
+Một chương trình đa luồng chứa hai hoặc nhiều phần có thể chạy đồng thời. Mỗi phần 
+của chương trình như vậy được gọi là một luồng (thread), và mỗi luồng định nghĩa một 
+đường thực thi riêng. Do đó, đa luồng là một hình thức đặc biệt của đa nhiệm.
+
+Bạn đã chắc chắn quen thuộc với đa nhiệm vì nó được hỗ trợ bởi hầu hết các hệ điều hành hiện đại. 
+Tuy nhiên, có hai loại đa nhiệm khác nhau: 
+    dựa trên tiến trình và 
+    dựa trên luồng. 
+Quan trọng là hiểu sự khác biệt giữa hai loại này. Đối với nhiều người đọc, đa nhiệm 
+dựa trên tiến trình là hình thức quen thuộc hơn. Một tiến trình trong bản chất là một chương trình đang chạy. 
+Do đó, đa nhiệm dựa trên tiến trình là tính năng cho phép máy tính của bạn chạy hai hoặc nhiều chương trình đồng thời. 
+Ví dụ, đa nhiệm dựa trên tiến trình cho phép bạn chạy trình biên dịch Java trong khi bạn đang sử dụng một trình soạn 
+thảo văn bản hoặc truy cập một trang web. Trong đa nhiệm dựa trên tiến trình, một chương trình là đơn vị mã nhỏ nhất 
+có thể được gửi bởi lập lịch (scheduler).
+
+    Trong môi trường đa nhiệm dựa trên luồng (thread-based), luồng (thread) là đơn vị nhỏ nhất của mã có thể được phân công. 
+Điều này có nghĩa là một chương trình đơn có thể thực hiện hai hoặc nhiều tác vụ đồng thời. Ví dụ, một trình soạn thảo 
+văn bản có thể định dạng văn bản cùng một lúc khi đó đang in, miễn là hai hoạt động này đang được thực hiện bởi hai 
+luồng riêng biệt. Do đó, đa nhiệm dựa trên quá trình (process-based multitasking) xử lý "bức tranh tổng thể", và 
+đa nhiệm dựa trên luồng (thread-based multitasking) xử lý chi tiết.
+
+    Luồng đa nhiệm yêu cầu ít chi phí hơn so với quá trình đa nhiệm. 
+Quá trình là các tác vụ nặng có nhu cầu vùng địa chỉ riêng. Giao tiếp giữa các quá trình tốn kém và có giới hạn. 
+Chuyển ngữ cảnh từ một quá trình sang một quá trình khác cũng tốn kém. Luồng (threads), được xem là nhẹ hơn. 
+Chúng chia sẻ cùng một không gian địa chỉ và chia sẻ chung một quá trình nặng. Giao tiếp giữa các luồng là rẻ hơn, 
+và việc chuyển ngữ cảnh từ một luồng sang luồng khác có chi phí thấp hơn. Trong khi các chương trình Java 
+sử dụng môi trường đa nhiệm dựa trên quá trình, đa nhiệm dựa trên quá trình không được điều khiển trực tiếp bởi Java. 
+Tuy nhiên, đa nhiệm đa luồng lại được điều khiển trực tiếp.
+
+    Multithreading cho phép bạn viết các chương trình hiệu quả tối đa sử dụng sức mạnh xử lý có sẵn trên hệ thống. 
+Một trong những cách quan trọng mà multithreading đạt được điều này là giảm thiểu thời gian rảnh rỗi. 
+Điều này đặc biệt quan trọng cho môi trường tương tác, mạng mẽ mà Java hoạt động vì thời gian rảnh rỗi là phổ biến. 
+Ví dụ, tốc độ truyền dữ liệu qua mạng là chậm hơn nhiều so với tốc độ xử lý của máy tính. 
+Ngay cả tài nguyên hệ thống tệp địa phương cũng được đọc và viết với tốc độ chậm hơn nhiều so với tốc độ xử lý của CPU. 
+Và tất nhiên, đầu vào của người dùng cũng chậm hơn máy tính. Trong môi trường đơn luồng, chương trình của bạn phải 
+đợi cho mỗi tác vụ hoàn thành trước khi có thể tiếp tục với tác vụ tiếp theo - mặc dù hầu hết thời gian chương trình 
+rảnh rỗi, đợi đầu vào. Multithreading giúp giảm thiểu thời gian rảnh rỗi này vì một luồng khác có thể chạy khi 
+một luồng khác đang chờ đợi.
+
+    Nếu bạn đã lập trình cho các hệ điều hành như Windows, thì bạn đã quen thuộc với lập trình đa luồng. 
+Tuy nhiên, việc Java quản lý luồng (thread) khiến đa luồng trở nên đặc biệt thuận tiện vì nó giúp xử lý nhiều 
+chi tiết cho bạn.

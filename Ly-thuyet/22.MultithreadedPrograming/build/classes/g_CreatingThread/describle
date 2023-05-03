@@ -1,0 +1,24 @@
+Bạn có thể tạo một thread bằng cách khởi tạo một đối tượng của lớp Thread. 
+
+Trong Java, có hai cách để thực hiện điều này:
+
+• Bạn có thể thực hiện interface Runnable.
+• Bạn có thể mở rộng class Thread.
+
+Hai phần tiếp theo sẽ tìm hiểu mỗi phương pháp một cách chi tiết.
+
+Ở điểm này, bạn có thể đang tự hỏi tại sao Java lại có hai cách để tạo luồng con, 
+và cách nào là tốt hơn. 
+Câu trả lời cho những câu hỏi này phụ thuộc vào cùng một điểm. 
+Lớp Thread định nghĩa một số phương thức có thể được ghi đè bởi một lớp kế thừa. 
+Trong số các phương thức này, chỉ có phương thức run() là bắt buộc phải ghi đè. 
+Đây là phương thức yêu cầu khi bạn thực hiện Runnable. 
+Nhiều lập trình viên Java cho rằng lớp chỉ nên được kế thừa khi nó được cải tiến 
+hoặc điều chỉnh theo một cách nào đó. Do đó, nếu bạn không muốn ghi đè bất kỳ phương thức Thread nào khác, 
+thì có lẽ nên đơn giản là thực hiện Runnable. Ngoài ra, bằng cách thực hiện Runnable, lớp luồng của bạn 
+không cần phải kế thừa Thread, 
+
+giúp nó có thể kế thừa một lớp khác. 
+
+Cuối cùng, việc sử dụng cách nào là tùy thuộc vào bạn. Tuy nhiên, trong phần còn lại của chương này, 
+chúng ta sẽ tạo luồng bằng cách sử dụng các lớp thực hiện Runnable.

@@ -8,10 +8,6 @@ package ctdl_hashmap;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * @author nguye
- */
 public class merge {
 
     public static void main(String[] args) {

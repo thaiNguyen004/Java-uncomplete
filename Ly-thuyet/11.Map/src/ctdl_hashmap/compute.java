@@ -24,7 +24,8 @@ public class compute {
         map.put("peter", 40);
         
         //compute là tổng hợp của computeIfAbsent và computeIfPresent
-        //Nếu key chưa tồn tại thì sẽ thêm một phần tử mới vào với key xác định bởi hàm, value phụ thuộc vào ánh xạ hàm và biểu thức lambda
+        //Nếu key chưa tồn tại thì sẽ thêm một phần tử mới vào với key xác định bởi hàm, 
+        //value phụ thuộc vào ánh xạ hàm và biểu thức lambda
         //Nếu key đã tồn tại thì phụ thuộc vào lambda để thay đổi value của key đó
         
         map.compute("john", (k,v) -> v + 10);
