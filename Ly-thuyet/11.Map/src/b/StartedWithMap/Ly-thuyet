@@ -6,28 +6,7 @@ Map không cho phép có key trùng lặp, nếu một key được thêm vào m
 thì giá trị của key đó sẽ được cập nhật với giá trị mới.
 
 Vì Map là một interface nên bắt buộc phải sử dụng các lớp triển khai của Map để khởi tạo một
-đối tượng Map. Do đó các phương thức của Map khá ít. Và các phương thức đó thì đều được triển khai 
-bởi các lớp thực hiện Map như HashMap, LinkedHashMap, TreeMap, EnumMap, ...
-
-Các phương thức của Map: 
-
-1. void clear(): Xóa toàn bộ các entry khỏi Map.
-2. boolean containsKey(Object key): Trả về true nếu Map chứa key được chỉ định.
-3. boolean containsValue(Object value): Trả về true nếu Map chứa value được chỉ định.
-4. Set<Map.Entry<K,V>> entrySet(): Trả về tập hợp các entry trong Map.
-5. V get(Object key): Trả về value tương ứng với key được chỉ định hoặc null nếu key không tồn tại.
-6. boolean isEmpty(): Trả về true nếu Map không chứa bất kỳ entry nào.
-7. Set<K> keySet(): Trả về tập hợp các key trong Map.
-8. V put(K key, V value): Thêm một entry mới vào Map. Nếu key đã tồn tại trong Map, value sẽ được cập nhật.
-9. void putAll(Map<? extends K, ? extends V> m): Thêm tất cả các entry trong Map m vào Map hiện tại.
-10. V remove(Object key): Xóa entry tương ứng với key được chỉ định và trả về value của entry đó. Nếu key không tồn tại, trả về null.
-11. int size(): Trả về số lượng entry trong Map.
-12. Collection<V> values(): Trả về tập hợp các value trong Map.
-
-• Giao diện Map ánh xạ các key duy nhất với các giá trị. Một key là một đối tượng được 
-sử dụng để lấy lại giá trị tại một thời điểm sau. Cho trước một key và một value, 
-bạn có thể lưu giá trị trong một đối tượng Map. Sau khi giá trị được lưu trữ, bạn có thể 
-lấy lại nó bằng cách sử dụng key tương ứng của nó. Map là một kiểu dữ liệu chung và được khai báo như sau:
+đối tượng Map. Map là một kiểu dữ liệu chung và được khai báo như sau:
 
     interface Map<K, V>
 
@@ -42,3 +21,28 @@ một map không thể sửa đổi.
 • Một ngoại lệ IllegalArgumentException sẽ được ném ra nếu có một đối số không hợp lệ được sử dụng.
 
 
+Các phương thức của Map: 
+a, int size()
+b, boolean isEmpty()
+c, boolean containsKey(Object key)
+d, boolean containsValue(Object value)
+e, V get(Object key)
+f, V put(K key, V value)
+g, V remove(Object key)
+h, void putAll(Map<? extends K, ? extends V> m)
+i, void clear() /
+k, Set<K> keySet()
+l, Collection<V> values()
+m, Set<Map.Entry<K, V>> entrySet()
+n, default V getOrDefault(Object key, V defaultValue)
+o, default void forEach(BiConsumer<? super K, ? super V> action)
+p, default void replaceAll(BiFunction<? super K, ? super V, ? extends V> function)
+q, default V putIfAbsent(K key, V value)
+r, default boolean remove(Object key, Object value)
+s, default boolean replace(K key, V oldValue, V newValue)
+t, default V replace(K key, V value)
+u, default V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)
+v, default V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)
+x, default V compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)
+y, default V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)
+z, default void clear()
