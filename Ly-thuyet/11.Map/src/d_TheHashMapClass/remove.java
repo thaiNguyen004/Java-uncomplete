@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package c_TheHashMapClass;
+package d_TheHashMapClass;
 
 import java.util.HashMap;
 import java.util.Iterator;

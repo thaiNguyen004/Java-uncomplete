@@ -1,3 +1,5 @@
+//Các method được định nghĩa ở Map thì không thực hiện lại nữa
+
 put(key, value): thêm một cặp key-value vào HashMap.
 
 get(key): lấy giá trị value tương ứng với key.
@@ -40,3 +42,5 @@ putIfAbsent() trả về giá trị hiện tại của khóa nếu khóa đã t�
 getOrDefault() trả về giá trị chúng ta quy định (giá trị mặc định) nếu không tồn tại giá trị đó
 
 replace() value tương ứng của key được xác định bởi hàm sẽ được thay đổi tương ứng xác định bởi hàm
+
+//Trên đây chưa phải là toàn bộ nhưng gần đủ :>

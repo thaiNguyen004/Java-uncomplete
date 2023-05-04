@@ -5,7 +5,7 @@ có thể bị trùng lặp. Một số bản đồ có thể chấp nhận khó
 trong khi các bản đồ khác không thể.
 
 • Có một điểm chính về Map cần đề cập từ đầu: chúng không thực hiện giao diện Iterable.
-Đối với các cấu trúc dữ liệu khác như Collection (List, Set, Queue, ... ) thì có thực
+Đối với các cấu trúc dữ liệu Collection (List, Set, Queue, ... ), Stack, Arrays, ... thì có thực
 hiện giao diện Iterable sử dụng để định nghĩa các tập hợp dữ liệu mà có thể được lặp qua 
 bằng cách sử dụng một vòng lặp for-each hoặc trình lặp thông thường. Và Map thì có thể được lặp 
 thông qua các chế độ xem tập hợp như EntrySet, KeySet hoặc Values. Tuy nhiên từ Java 8 Map đã có thể
@@ -13,13 +13,17 @@ lặp giống như các CTDL kia thông qua forEach sử dụng biểu thức la
 nhưng nên nhớ đây chỉ là giới thiệu, các bạn sẽ rõ về từng mục nhỏ này ngay trong chapter này
 
 The Map Interfaces
-Bởi vì các giao diện định nghĩa tính chất và bản chất của bản đồ, nên bàn về bản đồ bắt đầu từ các giao diện này. 
-Các giao diện sau hỗ trợ bản đồ:
-
-Interface               Description
-Map                     Maps(Ánh xạ) các khóa duy nhất tới các giá trị
-Map.Entry               Mô tả một phần tử (key/value) trong Map. Đây là một inner class của Map
-NavigableMap            Kế thừa SortedMap giúp sử lý việc truy xuất các mục dựa trên giá
-SortedMap               Kế thừa Map, lấy các key theo thứ tự tăng dần
+Bởi vì các giao diện định nghĩa tính chất và bản chất của Map, nên bàn về Map bắt đầu từ các giao diện này. 
+Các giao diện sau hỗ trợ Map:
+1. SortedMap
+2. NavigableMap
+3. Map.Entry
 
 Từng interface sẽ được học :))
+
+//Chuyển sang package StartedWithMap để học các thứ cơ bản nhất, ai hiểu rồi có thể chuyển tới TheHashMapClass và sau đó là 
+TheMapInterface
+
+//Khuyên nên học đến Class HashMap thôi vì các kiến thức về Class triển khai Map còn nhiều và chưa đủ nên, tối nay học nhẹ
+//Học về HashMap, lần sau sẽ học hết về các class triển khai Map, chi tiết xem trong package TheMapInterface
+
