@@ -1,0 +1,44 @@
+Map là một interface trong Java Collections Framework, được sử dụng để lưu trữ các cặp key-value. 
+Trong một Map, mỗi key đều là duy nhất và được sử dụng để truy cập đến giá trị tương ứng với key đó. 
+Các giá trị có thể được truy cập thông qua các key tương ứng của chúng.
+
+Map không cho phép có key trùng lặp, nếu một key được thêm vào một Map đã có sẵn và key đó đã tồn tại, 
+thì giá trị của key đó sẽ được cập nhật với giá trị mới.
+
+Vì Map là một interface nên bắt buộc phải sử dụng các lớp triển khai của Map để khởi tạo một
+đối tượng Map. Do đó các phương thức của Map khá ít. Và các phương thức đó thì đều được triển khai 
+bởi các lớp thực hiện Map như HashMap, LinkedHashMap, TreeMap, EnumMap, ...
+
+Các phương thức của Map: 
+
+1. void clear(): Xóa toàn bộ các entry khỏi Map.
+2. boolean containsKey(Object key): Trả về true nếu Map chứa key được chỉ định.
+3. boolean containsValue(Object value): Trả về true nếu Map chứa value được chỉ định.
+4. Set<Map.Entry<K,V>> entrySet(): Trả về tập hợp các entry trong Map.
+5. V get(Object key): Trả về value tương ứng với key được chỉ định hoặc null nếu key không tồn tại.
+6. boolean isEmpty(): Trả về true nếu Map không chứa bất kỳ entry nào.
+7. Set<K> keySet(): Trả về tập hợp các key trong Map.
+8. V put(K key, V value): Thêm một entry mới vào Map. Nếu key đã tồn tại trong Map, value sẽ được cập nhật.
+9. void putAll(Map<? extends K, ? extends V> m): Thêm tất cả các entry trong Map m vào Map hiện tại.
+10. V remove(Object key): Xóa entry tương ứng với key được chỉ định và trả về value của entry đó. Nếu key không tồn tại, trả về null.
+11. int size(): Trả về số lượng entry trong Map.
+12. Collection<V> values(): Trả về tập hợp các value trong Map.
+
+• Giao diện Map ánh xạ các key duy nhất với các giá trị. Một key là một đối tượng được 
+sử dụng để lấy lại giá trị tại một thời điểm sau. Cho trước một key và một value, 
+bạn có thể lưu giá trị trong một đối tượng Map. Sau khi giá trị được lưu trữ, bạn có thể 
+lấy lại nó bằng cách sử dụng key tương ứng của nó. Map là một kiểu dữ liệu chung và được khai báo như sau:
+
+    interface Map<K, V>
+
+• Ở đây, K chỉ định kiểu của các key và V chỉ định kiểu của các value.
+Các phương thức được khai báo bởi Map được tóm tắt trong Bảng 1. 
+• Một số phương thức sẽ ném ra ngoại lệ ClassCastException khi một đối tượng không 
+tương thích với các phần tử trong map. 
+• Một ngoại lệ NullPointerException sẽ được ném ra nếu có một nỗ lực để sử dụng một 
+đối tượng null và null không được phép trong map.
+• Một ngoại lệ UnsupportedOperationException sẽ được ném ra khi có một nỗ lực để thay đổi 
+một map không thể sửa đổi. 
+• Một ngoại lệ IllegalArgumentException sẽ được ném ra nếu có một đối số không hợp lệ được sử dụng.
+
+

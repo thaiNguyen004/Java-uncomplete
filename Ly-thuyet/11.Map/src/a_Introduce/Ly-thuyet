@@ -22,4 +22,4 @@ Map.Entry               Mô tả một phần tử (key/value) trong Map. Đây 
 NavigableMap            Kế thừa SortedMap giúp sử lý việc truy xuất các mục dựa trên giá
 SortedMap               Kế thừa Map, lấy các key theo thứ tự tăng dần
 
-Từng interface sẽ được học ngay sau đây:))
+Từng interface sẽ được học :))

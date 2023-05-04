@@ -1,4 +1,4 @@
-package ctdl_hashmap;
+package c_TheHashMapClass;
 
 
 import java.util.HashMap;

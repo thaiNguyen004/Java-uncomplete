@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package ctdl_hashmap;
+package c_TheHashMapClass;
 
 import java.util.HashMap;
 import java.util.Map;

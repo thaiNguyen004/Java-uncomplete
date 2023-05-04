@@ -3,14 +3,12 @@
  *
  * <Nhập mô tả tại đây>
  */
-package b_TheMapInterface;
+package d_TheMapInterface;
 
 import java.util.AbstractMap;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
@@ -158,8 +156,6 @@ public class SortedMapInterface {
 //        System.out.println(newMap7.replace("e", 7, 21)); // trả về true nếu tt được ngược lại trả về false
         newMap7.replaceAll((k, v) -> v + 10); //Thay thế tất cả các value theo lambda, vì là void nên không cho vào println được
         newMap7.forEach((k,v) -> System.out.println("K: "+k+" V: "+v));
-        
-        //9 NavigableMap descendingMap để dùng phương thức descendingMap thì lại phải học về interface NavigableMap
         
         
     }

@@ -28,7 +28,7 @@ class MyClass {
         }
         try {
             System.out.print(nameOfThread+" đang tạo số: ");
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             System.out.println("Interrupted");
         }
@@ -56,7 +56,7 @@ class MyClass {
         }
         try {
             System.out.print(nameOfThread+" đang tính toán bình phương của "+num+": ");
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             System.out.println("Interrupted");
         }
@@ -82,7 +82,7 @@ class MyClass {
         }
         try {
             System.out.print(nameOfThread+" đang tính toán bình phương của "+squared+": ");
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             System.out.println("Interrupted");
         }

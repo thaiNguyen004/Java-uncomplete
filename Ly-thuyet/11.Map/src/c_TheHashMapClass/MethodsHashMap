@@ -1,6 +1,3 @@
-THIẾU PHẦN GIẢI THÍCH HASHMAP VỚI MAP
-Các phương thức của HashMap trong Java tương tự với các phương thức của interface Map, bao gồm:
-
 put(key, value): thêm một cặp key-value vào HashMap.
 
 get(key): lấy giá trị value tương ứng với key.
@@ -43,4 +40,3 @@ putIfAbsent() trả về giá trị hiện tại của khóa nếu khóa đã t�
 getOrDefault() trả về giá trị chúng ta quy định (giá trị mặc định) nếu không tồn tại giá trị đó
 
 replace() value tương ứng của key được xác định bởi hàm sẽ được thay đổi tương ứng xác định bởi hàm
-
