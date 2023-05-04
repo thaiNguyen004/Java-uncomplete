@@ -8,7 +8,7 @@ package d_TheHashMapClass;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Of {
+public class of {
 
     public static void main(String[] args) {
         /*default Map<K,V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6): 
