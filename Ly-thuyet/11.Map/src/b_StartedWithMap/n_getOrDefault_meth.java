@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package b.StartedWithMap;
+package b_StartedWithMap;
 
 import java.util.HashMap;
 import java.util.Map;
