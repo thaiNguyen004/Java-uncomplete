@@ -3,8 +3,6 @@
  *
  * <Nhập mô tả tại đây>
  */
-package d_TheHashMapClass;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -51,50 +49,61 @@ Ví dụ, nếu hệ số lấp đầy của một hash map là 0.75, nghĩa là
 kích thước của hash map không quá lớn so với số lượng phần tử thực sự, từ đó giúp tối ưu hóa hiệu suất 
 truy cập và thao tác trên hash map.
  */
-public class a_introduce {
+public class a_HashMap {
 
     //Ở file này cùng học nốt về 2 khái niệm là entrySet và keySet
     public static void main(String[] args) {
         //create a HashMap
-        HashMap<String, Integer> hm = new HashMap<String, Integer>();
+        HashMap<String, Double> hm = new HashMap<>();
 
         //puts elements to the HashMap
-        hm.put("Nguyen", 19);
-        hm.put("Dung", 18);
-        hm.put("Thao", 19);
-        hm.put("Linh", 25);
-
-        /*entrySet method : 
-        Trong java, phương thức entrySet được định nghĩa trong các class giao diện Map. 
-        Phương thức này trả về một Set chứa tất cả các entries của map, tức là các cặp key-value 
-        được lưu trữ trong map dưới dạng các đối tượng Map.Entry<K, V> như đã được học, một phần tử 
-        trong Set là một đối tượng Map.Entry<K, V>. Mỗi đối tượng Map.Entry<K, V> biểu diễn một cặp key-value 
-        và cung cấp các phương thức getKey() và getValue() để truy cập vào key và value tương ứng của entry đó. 
-         */
-        //Tạo ra tập hợp các Entry
-        Set<Map.Entry<String, Integer>> set = hm.entrySet();
-
-        //Duyệt bằng for-each 
-        for (Map.Entry<String, Integer> entry : set) {
-            System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
+        hm.put("Nguyen", 650.14);
+        hm.put("Dung", 120.11);
+        hm.put("Thao", 191.11);
+        hm.put("Linh", 255.14);
+        
+        //Tập hợp Set chứa các entries
+        Set<Map.Entry<String, Double>> set = hm.entrySet(); 
+        for (Map.Entry<String, Double> entry : set){
+            System.out.println(entry.getKey() +": "+entry.getValue());
         }
+        
+        //Giả sử Nguyen gửi vào ngân hàng thêm 100$
+        double balance = hm.get("Nguyen");
+        hm.put("Nguyen", balance + 100);
+        
+        System.out.println("Tiền gửi mới của Nguyên: "+hm.get("Nguyen"));
+        
+        /*Chương trình bắt đầu bằng cách tạo một bản đồ băm (hash map) và sau đó 
+        thêm các ánh xạ của key vào phần value tương ứng. Tiếp theo, nội dung của bản đồ 
+        được hiển thị bằng cách sử dụng một tập hợp xem (set-view) được lấy bằng cách gọi 
+        phương thức entrySet(). 
+        Các khóa và giá trị được hiển thị bằng cách gọi các phương thức getKey() và getValue() 
+        được định nghĩa bởi Map.Entry.
 
-        //keySet() trả về một tập hợp chứa tất cả các khóa (key) có trong.
-        //đây là phương thức định nghĩa của Map, không phải của riêng HashMap
-        Set<String> setKey = hm.keySet();
-        //Duyệt bằng for-each 
-        for (String key : setKey) {
-            System.out.println(key);
-        }
-        //Duyệt bằng forEach 
-        setKey.forEach(System.out::print); //duyệt qua tất cả các phần tử của Set 
-
+        Chú ý đến cách tiền được gửi vào tài khoản của Nguyen. Phương thức put() 
+        sẽ tự động thay thế bất kỳ giá trị nào đã tồn tại được liên kết với khóa 
+        được chỉ định bằng giá trị mới. Do đó, sau khi tài khoản của Nguyen được cập nhật, 
+        bản đồ băm vẫn chỉ chứa một tài khoản "Nguyen" duy nhất.*/
+        
+        /*
+            Linh: 255.14
+            Thao: 191.11
+            Nguyen: 650.14
+            Dung: 120.11
+            Tiền gửi mới của Nguyên: 750.14
+        */
+        
+        /*Lưu ý: HashMap sử dụng cấu trúc bảng băm để lưu trữ phần tử nên sẽ không đảm bảo về 
+        thứ tự put vào ban đầu*/
+        
+        
         //Khởi tạo HashMap với constructor : HashMap()
         HashMap<String, Integer> hmct1 = new HashMap<>();
         //Capacity: 16; fillRadio : 0.75
 
         //Khởi tạo HashMap với constructor : HashMap(Map<? extends K,? extends V> m)
-        HashMap<String, Integer> hmct2 = new HashMap<>(hm);
+        HashMap<String, Double> hmct2 = new HashMap<>(hm);
         //Có thể nói hmct2 như một bản sao chép của HashMap hm
         
         //Khởi tạo HashMap với cunstructor : HashMap(int capacity)
