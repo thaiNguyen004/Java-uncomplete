@@ -57,7 +57,6 @@ public class b_TreeMap {
         tm.put("Boruto", strength + 1000);
         
         System.out.println("Sức mạnh mới của Boruto: "+tm.get("Boruto"));
-        
     }
     
 }

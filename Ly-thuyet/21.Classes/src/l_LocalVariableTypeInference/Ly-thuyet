@@ -3,12 +3,12 @@
 Nhớ lại rằng khi sử dụng local variable type inference, kiểu của biến được chỉ định là var 
 và biến phải được khởi tạo giá trị ban đầu. Các ví dụ trước đó đã cho thấy type inference 
 với các kiểu nguyên thủy, nhưng nó cũng có thể được sử dụng với các kiểu tham chiếu. 
-Trong thực tế, type inference với các kiểu tham chiếu là một ứng dụng chính của nó. 
+Trong thực tế, type inference với các kiểu tham chiếu là một ứng dụng chính của nó.
 Đây là một ví dụ đơn giản - Xem trong file example.java
 
     Như được giải thích trong Chương 3, một trong những lợi ích của local variable type inference 
 là khả năng tối giản mã, và điều này được thể hiện rõ nhất với các kiểu dữ liệu tham chiếu. 
-Lý do cho điều này là nhiều kiểu lớp trong Java có tên khá dài. 
+Lý do cho điều này là nhiều kiểu lớp trong Java có tên khá dài.
 Ví dụ, trong Chương 13, bạn sẽ tìm hiểu về lớp FileInputStream, được sử dụng để mở một tệp tin 
 để thực hiện các hoạt động đầu vào. Trước đây, bạn sẽ khai báo và khởi tạo một FileInputStream 
 bằng cách sử dụng khai báo truyền thống như được hiển thị ở đây:
