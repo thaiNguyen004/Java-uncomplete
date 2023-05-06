@@ -2,8 +2,8 @@
 Tuy nhiên, đó là bởi vì bộ so sánh (comparator) xác định chính xác thứ tự đã được sắp xếp như thế nào. 
 Mặc định, các lớp này lưu trữ các phần tử của chúng bằng cách sử dụng cái gọi là "sắp xếp tự nhiên" 
 (natural ordering) trong Java, đó là thứ tự mà bạn thường mong đợi (A trước B, 1 trước 2, và cetera). 
-Nếu bạn muốn sắp xếp các phần tử theo cách khác, hãy chỉ định một Comparator khi bạn tạo ra tập hợp hoặc bản đồ. 
-Làm như vậy sẽ cho bạn khả năng quản lý chính xác cách các phần tử được lưu trữ trong các bộ sưu tập và bản đồ đã được sắp xếp.
+Nếu bạn muốn sắp xếp các phần tử theo cách khác, hãy chỉ định một Comparator khi bạn tạo ra Collection hoặc Map. 
+Làm như vậy sẽ cho bạn khả năng quản lý chính xác cách các phần tử được lưu trữ trong các Collection và Map đã được sắp xếp.
 
 • Comparator là một giao diện chung, có khai báo như sau:
 
@@ -53,25 +53,82 @@ Nếu bạn muốn một comparator có thể xử lý giá trị null, hãy s�
 Trong cả hai trường hợp, nếu hai giá trị được so sánh là khác null, comp thực hiện so sánh. 
 Nếu truyền vào null cho comp, thì tất cả các giá trị khác null được xem như tương đương.
 
-Phương thức nullsFirst() trả về một Comparator xem các giá trị null như nhỏ hơn các giá trị khác. 
-Phương thức nullsLast() trả về một Comparator xem các giá trị null như lớn hơn các giá trị khác. 
-Trong cả hai trường hợp, nếu hai giá trị đang được so sánh đều khác null, thì comp thực hiện so sánh. 
-Nếu comp được truyền vào là null, thì tất cả các giá trị khác null được coi là tương đương.
+• Nếu hai giá trị được so sánh khác null và trong comparator (comp) có giá trị null, thì quy tắc so sánh 
+sẽ được áp dụng như sau:
 
-Một phương thức mặc định khác là thenComparing(). Nó trả về một Comparator thực hiện so sánh 
+1. nullsFirst(): Trong trường hợp này, giá trị null được coi là nhỏ hơn các giá trị khác. 
+Điều này có nghĩa là nếu một trong hai giá trị (hoặc cả hai) là null, giá trị null sẽ được xem 
+như nhỏ hơn giá trị không phải null. Do đó, nếu comp cho null là nullsFirst(), giá trị null 
+sẽ được đặt trước trong thứ tự sắp xếp. Các giá trị không phải null sẽ được so sánh bởi comp.
+
+    Ví dụ: Giả sử có hai giá trị A và B, với A khác null và B là null. Nếu comp là nullsFirst(), thì A được coi là lớn hơn B.
+
+2. nullsLast(): Trong trường hợp này, giá trị null được coi là lớn hơn các giá trị khác. 
+Điều này có nghĩa là nếu một trong hai giá trị (hoặc cả hai) là null, giá trị null sẽ được xem 
+như lớn hơn giá trị không phải null. Do đó, nếu comp cho null là nullsLast(), giá trị null 
+sẽ được đặt sau trong thứ tự sắp xếp. Các giá trị không phải null sẽ được so sánh bởi comp.
+
+    Ví dụ: Giả sử có hai giá trị A và B, với A khác null và B là null. Nếu comp là nullsLast(), thì A được coi là nhỏ hơn B.
+
+• Tổng quát hơn, khi hai giá trị được so sánh và comp chứa giá trị null, thì giá trị null sẽ được đặt 
+ở một vị trí cụ thể trong thứ tự sắp xếp, trước hoặc sau giá trị không phải null, 
+dựa vào việc sử dụng nullsFirst() hoặc nullsLast().
+
+• Một phương thức mặc định khác là thenComparing(). Nó trả về một Comparator thực hiện so sánh 
 thứ hai khi kết quả của so sánh đầu tiên cho thấy các đối tượng được so sánh là bằng nhau. 
 Do đó, nó có thể được sử dụng để tạo ra một chuỗi "so sánh theo X sau đó so sánh theo Y". 
 Ví dụ, khi so sánh các thành phố, so sánh đầu tiên có thể so sánh tên, 
 với so sánh thứ hai so sánh các tiểu bang. (Do đó, Springfield, Illinois, 
 sẽ đứng trước Springfield, Missouri, giả sử sắp xếp theo thứ tự bình thường theo thứ tự chữ cái.) 
 Phương thức thenComparing() có ba dạng. 
-Đầu tiên, bạn có thể chỉ định comparator thứ hai bằng cách truyền một thể hiện của Comparator:
+• Đầu tiên, bạn có thể chỉ định comparator thứ hai bằng cách truyền một thể hiện của Comparator:
     default Comparator<T> thenComparing(Comparator<? super T> thenByComp)
 Ở đây, thenByComp chỉ định bộ so sánh được gọi nếu so sánh đầu tiên trả về bằng nhau.
 
-Các phiên bản tiếp theo của thenComparing() cho phép bạn chỉ định giao diện hàm tiêu chuẩn Function 
+• Các phiên bản tiếp theo của thenComparing() cho phép bạn chỉ định giao diện hàm tiêu chuẩn Function 
 (được xác định bởi java.util.function). Chúng được thể hiện dưới đây:
-    default<U extends Comparable<? super U> Comparator<T>> thenComparing(Function<? super T, ? extends U> getKey)
+    default<U extends Comparable<? super U>> Comparator<T> thenComparing(Function<? super T, ? extends U> getKey)
     default<U> Comparator<T> 
             thenComparing(Function<? super T, ? extends U> getKey,
-                          Comparator<? extends U> getComp)
+                          Comparator<? extends U> keyComp)
+
+    Cả hai phiên bản đều sử dụng "getKey" để tham chiếu đến hàm lấy khóa so sánh tiếp theo, 
+được sử dụng nếu phép so sánh đầu tiên trả về kết quả bằng nhau. Trong phiên bản thứ hai, "keyComp" 
+chỉ định comparator được sử dụng để so sánh các khóa. (Ở đây và các sử dụng sau đó, U chỉ định loại của khóa.)
+
+• Comparator cũng cung cấp các phiên bản đặc biệt của các phương thức "then comparing" cho các kiểu nguyên thủy.
+    default Comparator<T> 
+        thenComparingDouble(ToDoubleFunction<? super T> getKey)
+
+    default Comparator<T> 
+        thenComparingInt (ToIntFunction<? super T> getKey)
+
+    default Comparator<T 
+        thenComparingLong (ToLongFunction<? super T> getKey)
+
+    Trong tất cả các phương thức, "getKey" tham chiếu đến một hàm lấy khóa so sánh tiếp theo.
+
+• Cuối cùng, Comparator có một phương thức gọi là comparing(). Nó trả về một comparator lấy khóa so sánh 
+từ một hàm được truyền vào phương thức. Có hai phiên bản của comparing(), được hiển thị ở đây:
+    static<T, U extends Comparable<U>> Comparator<T> 
+        comparing(Function<? super T, ? extends U> getKey)
+
+   static<T,U> Comparator <T>
+        comparing(Function<? super T, ? extends U> getKey, 
+                    Comparator<? super U> keyComp)
+
+    Cả hai phiên bản đều sử dụng "getKey" để tham chiếu đến một hàm lấy khóa so sánh tiếp theo. 
+Trong phiên bản thứ hai, "keyComp" chỉ định comparator được sử dụng để so sánh các khóa.
+
+• Comparator cũng cung cấp các phiên bản đặc biệt của các phương thức này cho các kiểu nguyên thủy.
+    static<T> Comparator<T>
+        comparingDouble(ToDoubleFunction<? super T> getKey)
+
+    static<T> Comparator<T> 
+        comparingInt (ToIntFunction<? super t> getKey)
+
+    static<T> Comparator<T>
+        comparingLong (ToLongFunction<? super T> getKey)
+
+    Trong tất cả các phương thức, "getKey" tham chiếu đến một hàm để lấy khóa so sánh tiếp theo.
+

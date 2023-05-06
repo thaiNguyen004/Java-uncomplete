@@ -5,15 +5,11 @@
  */
 package f_Comparators;
 
-/**
- *
- * @author nguye
- */
-public class example {
 
-    
+public class nullsFirst_nullsLast {
+
     public static void main(String[] args) {
-        //
+        
     }
     
 }
