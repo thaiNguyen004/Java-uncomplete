@@ -8,7 +8,10 @@
  */
 package f_Comparators;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -151,6 +154,51 @@ public class then_comparing {
         
         
         //Kiểu dữ liệu nguyên thủy
+        
+        //Giả sử ta có một class Sinh viên có thuộc tính id và name, ta muốn sắp xếp một List các Sinh viên
+        //theo thứ tự tăng dần của id chẳng han: (lớp SinhVien được viết bên dưới)
+        List<SinhVien> dssv = new ArrayList<>();
+        dssv.add(new SinhVien(2, "John"));
+        dssv.add(new SinhVien(1, "Boruto"));
+        dssv.add(new SinhVien(0, "Boruto"));
+        dssv.add(new SinhVien(3, "Anna"));
+        
+        //Sử dụng comparingInt để so sánh và sắp xếp dssv tăng dần theo id
+        // `::` có tác dụng tham chiếu tới constructor hoặc là các phương thức của một đối tượng
+        //trong ví dụ này `::` được sử dụng để tham chiếu tới phương thức getId của SinhVien là lấy biến id làm khóa so sánh 
+        Collections.sort(dssv, Comparator.comparingInt(SinhVien::getId));
+        
+        //Kết quả là : 
+        for (SinhVien item : dssv) {
+            System.out.print(item.id +" : ");
+            System.out.println(item.name);
+        }
+        /*
+            0 : Boruto
+            1 : Boruto
+            2 : John
+            3 : Anna
+        Thứ tự của id đã được sắp xếp tăng dần
+        */
+        
+        //Một ví dụ sử dụng thenComparingInt
+        Collections.sort(dssv, Comparator.comparing(SinhVien::getName).
+                thenComparingInt(SinhVien::getId));
+        //Trong ví dụ trên ta sắp xếp dssv dựa trên tên, nếu tên bằng nhau thì so sánh dựa vào id
+        
+        //Kết quả là: 
+        for (SinhVien item : dssv) {
+            System.out.print(item.id +" : ");
+            System.out.println(item.name);
+        }
+        /*
+            3 : Anna
+            0 : Boruto
+            1 : Boruto
+            2 : John
+        Thứ tự của name đã được sắp xếp, hãy để ý tên `Boruto` có 2 tên trùng nhau và đã sắp xếp dựa vào id
+        Sinh viên có (id 0 và name là Boruto) đứng trước (id 1 và có tên là Boruto)
+        */
     }
 }
 //Một comparator so sánh họ (last name)
@@ -173,4 +221,24 @@ class CompThenByFirstName implements Comparator<String> {
         return aStr.compareToIgnoreCase(bStr);
     }
     
+}
+class SinhVien{ 
+    int id;
+    String name;
+    SinhVien (int a, String b){
+        id = a;
+        name = b;
+    }
+    int getId(){
+        return id;
+    }
+    void setId(int a){
+        id = a;
+    }
+    String getName() {
+        return name;
+    }
+    void setName(String a) {
+        name = a;
+    }
 }

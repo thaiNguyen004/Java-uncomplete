@@ -25,8 +25,8 @@ cách các đối tượng được sắp xếp. Ví dụ, để sắp xếp the
 • Phương thức equals() kiểm tra xem một đối tượng có bằng với bộ so sánh được gọi hay không:
     boolean equals(Object obj)
 • Ở đây, obj là đối tượng được kiểm tra tính bằng với bộ so sánh được gọi. 
-Phương thức trả về true nếu obj và đối tượng gọi đều là các đối tượng Comparator 
-và sử dụng cùng một thứ tự sắp xếp. Nếu không, phương thức trả về false. 
+Phương thức trả về true nếu obj và đối tượng gọi đều là các đối tượng Comparator
+và sử dụng cùng một thứ tự sắp xếp. Nếu không, phương thức trả về false.
 Ghi đè equals() không cần thiết, và hầu hết các bộ so sánh đơn giản sẽ không làm vậy.
 
 • Trong nhiều năm, hai phương thức trên là hai phương thức duy nhất được định nghĩa bởi Comparator. 
