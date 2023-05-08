@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package c_MapClasses;
+package d_MapClasses;
 
 /*
 Lớp IdentityHashMap mở rộng AbstractMap và triển khai giao diện Map. Nó tương tự như HashMap, 

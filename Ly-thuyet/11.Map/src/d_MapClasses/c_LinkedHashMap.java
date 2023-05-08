@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package c_MapClasses;
+package d_MapClasses;
 
 /*
 • LinkedHashMap mở rộng từ HashMap. Nó duy trì một danh sách liên kết các entry trong bản đồ, 

@@ -97,13 +97,18 @@ public class nullsFirst_nullsLast {
         */
         
         //Sử dụng Comparator để so sánh các value của Map
+        
+        //Chưa hoàn thành!! Lý do : chưa biết được việc sắp xếp value ở Map có tác dụng gì
+        
         Comparator<Double> comp2 = Comparator.nullsFirst(Double::compareTo);
 //        TreeMap<String, Double> tm = new TreeMap<>(Comparator.comparing(Double::doubleValue, comp2)); lỗi!
 //      Lỗi trên sảy ra như tôi đã nói đó là Comparator của Map mặc định sẽ lấy key để so sánh, tree map được khởi tạo
 //      với key có kiểu là String trong khi Comparator lại chỉ định Double nên đã xảy ra lỗi
 //      để khắc phục lỗi này phải qui định cho comparator chỉ định so sánh values của Map thay vì chỉ định key (mặc định)
 
-        TreeMap<String, Double> tm = new TreeMap<>();
+
+        Comparator<String> comp1 = Comparator.comparing(String::toString);
+        TreeMap<String, Double> tm = new TreeMap<>(comp1);
         tm.put("Nguyễn Thái Nguyên", null);
         tm.put("Vũ Tiến Vinh", 8.2);
         tm.put("Bùi Hoàng Dũng", null);

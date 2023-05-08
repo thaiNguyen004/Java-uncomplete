@@ -47,8 +47,7 @@ class TComp implements Comparator<String> {
 public class then_comparing {
 
     public static void main(String[] args) {
-        //tạo một tree map 
-        //create a tree map
+        //Sử dụng then_comparing để sắp xếp họ nếu họ bằng nhau thì so sánh toàn bộ tên (Map) (Tiêu chuẩn tên USA)
         TreeMap<String, Double> tm = new TreeMap<String, Double>(new TComp());
         
         //thêm các phần tử vào map
@@ -199,6 +198,35 @@ public class then_comparing {
         Thứ tự của name đã được sắp xếp, hãy để ý tên `Boruto` có 2 tên trùng nhau và đã sắp xếp dựa vào id
         Sinh viên có (id 0 và name là Boruto) đứng trước (id 1 và có tên là Boruto)
         */
+        
+        
+        //Sử dụng then_comparing để sắp xếp tên nếu tên bằng nhau thì so sánh toàn bộ tên (Collection) (Tiêu chuẩn tên VN)
+        //Tuy nhiên ví dụ này thực hiện trên list
+        /*Giải thích bài tập: Đầu tiên sẽ so sánh tên chính, nếu tên chính bằng nhau thì so sánh toàn bộ tên
+        và cho ra một danh sách (list) sắp xếp tăng dần*/
+        Comparator<SinhVien> comp = 
+                Comparator.comparing((SinhVien) -> SinhVien.getName()
+                        .substring(SinhVien.getName().lastIndexOf(' ')));
+        
+        Comparator<SinhVien> compFirstThenLast = comp.thenComparing(SinhVien::getName);
+        
+        List<SinhVien> studentList = new ArrayList<>();
+        studentList.add(new SinhVien(1, "Thái Nguyên"));
+        studentList.add(new SinhVien(2, "Hoàng Dũng"));
+        studentList.add(new SinhVien(3, "Tiến Vinh"));
+        studentList.add(new SinhVien(4, "Hoàng Nguyên"));
+        
+        Collections.sort(studentList, compFirstThenLast);
+        //Xuất kết quả: 
+        studentList.forEach((e) -> System.out.println(e.getId() +": "+e.getName()));
+        /*  2: Hoàng Dũng
+            4: Hoàng Nguyên
+            1: Thái Nguyên
+            3: Tiến Vinh
+        */
+        
+        //Ta thấy rằng kết quả trả về có 2 đối tượng có firstname đều là "Nguyên"
+        //Nhưng fullname Hoàng Nguyên sẽ bé hơn Thái Nguyên nên Hoàng Nguyên được hiển thị trước
     }
 }
 //Một comparator so sánh họ (last name)
