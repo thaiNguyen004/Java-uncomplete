@@ -49,3 +49,6 @@ nhóm các đối tượng một cách dễ dàng và tiện lợi hơn.
 Vì vậy, sự thêm vào của cơ chế collection là một cải tiến, một phương pháp tốt hơn để làm việc 
 với các nhóm đối tượng, nhưng không có nghĩa là các lớp gốc trở nên không hợp lệ hay không còn sử dụng được.
 
+• GHI CHÚ: Nếu bạn quen thuộc với ngôn ngữ C++, thì việc biết rằng công nghệ collections của Java tương tự như 
+Standard Template Library (STL) trong C++ sẽ hữu ích. Điều mà C++ gọi là container, Java gọi là collection. 
+Tuy nhiên, có những khác biệt đáng kể giữa Collections Framework và STL. Quan trọng là không nên vội kết luận.
