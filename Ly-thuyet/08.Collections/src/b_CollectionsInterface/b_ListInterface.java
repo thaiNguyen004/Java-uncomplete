@@ -7,8 +7,11 @@ package b_CollectionsInterface;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 /*
 • Giao diện List mở rộng từ Collection và định nghĩa hành vi của một tập hợp lưu trữ một chuỗi các phần tử. 
@@ -165,6 +168,8 @@ public class b_ListInterface {
                 "a", "a","a","a","a","a","a","a"
                 ,"a","a","a","a","a","a","a","a");
 //        list.set(0, "h"); lỗi!! - Vì không thay đổi được một List sử dụng phương thức of
+
+        
      }
     
 }

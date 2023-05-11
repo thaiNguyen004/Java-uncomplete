@@ -1,4 +1,4 @@
-ừ khi Java được phát hành phiên bản 1.0 vào năm 1995, đã có nhiều tính năng mới được thêm vào Java. 
+Từ khi Java được phát hành phiên bản 1.0 vào năm 1995, đã có nhiều tính năng mới được thêm vào Java. 
 Một tính năng đã có tác động sâu sắc và kéo dài lâu dài là generics. Giới thiệu bởi JDK 5, 
 generics đã thay đổi Java theo hai cách quan trọng. Đầu tiên, nó đã thêm một yếu tố cú pháp mới 
 vào ngôn ngữ. Thứ hai, nó đã gây ra các thay đổi cho nhiều lớp và phương thức trong API cốt lõi. 
