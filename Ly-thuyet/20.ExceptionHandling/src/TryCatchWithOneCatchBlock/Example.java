@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package TryCatch;
+package TryCatchWithOneCatchBlock;
 
 public class Example {
     public static void main(String[] args) {
@@ -13,6 +13,5 @@ public class Example {
             //handle an exception
             System.out.println("An exception occurred:  " + e.getMessage());
         }
-    }
-    
+    }   
 }

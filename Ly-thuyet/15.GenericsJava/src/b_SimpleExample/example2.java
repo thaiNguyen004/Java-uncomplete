@@ -6,9 +6,9 @@
 package b_SimpleExample;
 //Generic Types Differ Based on Their Type Arguments
 
-class Gen<T> {
+class Gens<T> {
     T ob;
-    Gen (T o){
+    Gens (T o){
         ob = o;
     }
     T getOb(){
@@ -20,9 +20,9 @@ class Gen<T> {
 }
 public class example2 {
     public static void main(String[] args) {
-        Gen<Integer> iOb1 = new Gen<Integer>(15);
-        Gen<Integer> iOb2 = new Gen<Integer>(12);
-        Gen<String> strOb = new Gen<String>("Hello world");
+        Gens<Integer> iOb1 = new Gens<Integer>(15);
+        Gens<Integer> iOb2 = new Gens<Integer>(12);
+        Gens<String> strOb = new Gens<String>("Hello world");
         
         
         /*Một điểm chính cần hiểu về kiểu generic là một tham chiếu của một phiên bản cụ thể 

@@ -159,6 +159,7 @@ public class a_CollectionInterface {
         Spliterator<Double> spliterator = col5.spliterator();
         spliterator.forEachRemaining(e -> System.out.println(e));
         
+        
     }
     
 }

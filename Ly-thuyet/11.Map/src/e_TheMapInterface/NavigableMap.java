@@ -1,8 +1,4 @@
-/**
- * Nguyễn Thái Nguyên
- *
- * <Nhập mô tả tại đây>
- */
+
 package e_TheMapInterface;
 
 import java.util.AbstractMap;

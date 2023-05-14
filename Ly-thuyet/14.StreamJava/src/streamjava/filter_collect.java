@@ -8,11 +8,13 @@ package streamjava;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class filter_collect {
     public static void main(String[] args) {
@@ -37,5 +39,6 @@ public class filter_collect {
                                                     .collect(Collectors.toCollection(LinkedList::new));
         System.out.println("Các số lớn >= 5");
         listBigerThan5.forEach(System.out::println);
+        
     }
 }

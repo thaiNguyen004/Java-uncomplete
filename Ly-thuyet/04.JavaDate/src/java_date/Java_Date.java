@@ -23,7 +23,7 @@ import java.util.Locale;
 public class Java_Date {
     public static void main(String[] args) {
         //LocalDate
-       
+        
         //now
         LocalDate lDate = LocalDate.now();
         //Lấy thời gian hiện tại

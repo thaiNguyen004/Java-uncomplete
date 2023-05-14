@@ -3,7 +3,7 @@
  *
  * <Nhập mô tả tại đây>
  */
-package TryCatch;
+package Throw;
 
 /**
  *

@@ -1,11 +1,7 @@
-/**
- * Nguyễn Thái Nguyên
- *
- * <Nhập mô tả tại đây>
- */
+
 package TryCatchWithMultipleCatches;
 
-class Example {
+class example {
 
     public void method() {
         //Ví dụ về sử dụng multiple catches block
@@ -70,7 +66,7 @@ class Example {
 
 }
 
-public class example {
+public class Example {
 
     public static void main(String[] args) {
         /**

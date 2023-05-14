@@ -12,7 +12,7 @@ import java.util.Random;
 - Luồng 1 thực hiện sinh số ngẫu nhiên.
 - Luồng 2 sẽ bình phương số mà luồng 1 đã sinh ra. 
 ! Điều kiện, luồng 2 phải xử lý xong bình phương in ra màn hình thì luồng 1 mới được sinh ra tiếp.*/
-class MyClass {
+class ClassNew {
     int num;
     int squared;
     boolean isGenerate = false;
@@ -101,8 +101,8 @@ class MyClass {
 class class1 implements Runnable{
     Thread t;
     String name;
-    MyClass o;
-    class1(String str, MyClass ob) {
+    ClassNew o;
+    class1(String str, ClassNew ob) {
         name = str;
         t = new Thread(this, name);
         o = ob;
@@ -119,8 +119,8 @@ class class1 implements Runnable{
 class class2 implements Runnable{
     Thread t;
     String name;
-    MyClass o;
-    class2(String str, MyClass ob) {
+    ClassNew o;
+    class2(String str, ClassNew ob) {
         name = str;
         t = new Thread(this, name);
         o = ob;
@@ -137,8 +137,8 @@ class class2 implements Runnable{
 class class3 implements Runnable{
     Thread t;
     String name;
-    MyClass o;
-    class3(String str, MyClass ob) {
+    ClassNew o;
+    class3(String str, ClassNew ob) {
         name = str;
         t = new Thread(this, name);
         o = ob;
@@ -155,7 +155,7 @@ class class3 implements Runnable{
 public class Ex2 {
 
     public static void main(String[] args) {
-        MyClass o = new MyClass();
+    	ClassNew o = new ClassNew();
         class1 thread1 = new class1("one", o);
         class2 thread2 = new class2("two", o);
         class3 thread3 = new class3("three", o);

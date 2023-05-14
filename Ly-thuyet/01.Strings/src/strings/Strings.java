@@ -89,6 +89,7 @@ public class Strings {
         String nottoUpperCase = "nguyễn THái NguyÊn";
         String toUpperCase = nottoUpperCase.toUpperCase();
         //toUpperCase = NGUYỄN THÁI NGUYÊN
+        
        
         
     }
