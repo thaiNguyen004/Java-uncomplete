@@ -1,1 +1,11 @@
+• Bởi vì không có hỗ trợ cho generics trước JDK 5, cần phải cung cấp một con đường chuyển tiếp từ 
+mã cũ không sử dụng generics. Hơn nữa, con đường chuyển tiếp này phải cho phép mã không sử dụng 
+generics vẫn hoạt động được trong khi vẫn tương thích với generics. Nói cách khác, mã không sử 
+dụng generics phải có thể làm việc với generics, và mã generics phải có thể làm việc với mã 
+không sử dụng generics.
 
+• Để xử lý việc chuyển tiếp sang generics, Java cho phép sử dụng một lớp generics mà không có bất kỳ 
+đối số kiểu nào. Điều này tạo ra một raw type cho lớp đó. Raw type này tương thích với mã cũ, 
+không có kiến thức về generics. Nhược điểm chính của việc sử dụng raw type là mất đi tính an toàn kiểu của generics.
+
+Dưới đây là một ví dụ minh họa cho raw type: file example.java
