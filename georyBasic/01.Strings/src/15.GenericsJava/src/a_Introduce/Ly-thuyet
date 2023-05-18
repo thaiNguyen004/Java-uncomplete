@@ -1,0 +1,55 @@
+Từ khi Java được phát hành phiên bản 1.0 vào năm 1995, đã có nhiều tính năng mới được thêm vào Java. 
+Một tính năng đã có tác động sâu sắc và kéo dài lâu dài là generics. Giới thiệu bởi JDK 5, 
+generics đã thay đổi Java theo hai cách quan trọng. Đầu tiên, nó đã thêm một yếu tố cú pháp mới 
+vào ngôn ngữ. Thứ hai, nó đã gây ra các thay đổi cho nhiều lớp và phương thức trong API cốt lõi. 
+Hiện nay, generics là một phần không thể thiếu của lập trình Java và cần có một hiểu biết vững chắc 
+về tính năng quan trọng này. Chúng ta sẽ xem xét nó chi tiết ở đây.
+
+Thông qua việc sử dụng generics, bạn có thể tạo ra các lớp, giao diện và phương thức hoạt động 
+với dữ liệu của nhiều loại khác nhau một cách an toàn về kiểu dữ liệu. Nhiều thuật toán có logic 
+giống nhau bất kể loại dữ liệu được áp dụng. Ví dụ, cơ chế hỗ trợ một ngăn xếp là giống nhau cho 
+một ngăn xếp lưu trữ các mục của kiểu Integer, String, Object hoặc Thread. 
+Với generics, bạn có thể định nghĩa một thuật toán một lần, độc lập với bất kỳ loại dữ liệu cụ thể nào, 
+sau đó áp dụng thuật toán đó cho nhiều loại dữ liệu mà không cần thêm bất kỳ nỗ lực nào khác. 
+Sức mạnh biểu hiện được thêm vào ngôn ngữ bởi generics đã thay đổi cách viết mã Java.
+
+Có lẽ tính năng của Java bị ảnh hưởng nhiều nhất bởi generics là Collections Framework. 
+Collections Framework là một phần của Java API và được mô tả chi tiết trong Chương 19, 
+tuy nhiên đề cập ngắn gọn là hữu ích ở đây. Một collection là một nhóm các đối tượng. 
+Collections Framework xác định một số lớp, chẳng hạn như danh sách và bản đồ, 
+để quản lý các collection. Các lớp collection luôn có thể làm việc với bất kỳ loại đối tượng nào. 
+Lợi ích mà generics thêm vào đó là các lớp collection hiện tại giờ đây có thể được sử dụng với 
+sự an toàn của kiểu hoàn chỉnh. Do đó, ngoài việc là một phần tử ngôn ngữ mạnh mẽ riêng biệt, 
+generics còn cho phép cải thiện đáng kể một tính năng hiện có. 
+Đây là một lý do khác tại sao generics là một bổ sung quan trọng đối với Java.
+
+Chương này mô tả cú pháp, lý thuyết và cách sử dụng của generics. Nó cũng cho thấy cách generics 
+cung cấp tính an toàn kiểu cho một số trường hợp khó khăn trước đây. Sau khi hoàn thành chương này, 
+bạn sẽ muốn xem xét Chương 19, nơi mô tả Framework Collections. 
+Ở đó, bạn sẽ tìm thấy nhiều ví dụ về generics trong hoạt động.
+
+...
+
+What Are Generics?
+Ở bản chất của nó, thuật ngữ generics có nghĩa là các loại được tham số hóa. Các loại được tham số hóa 
+rất quan trọng bởi vì chúng cho phép bạn tạo các lớp, giao diện và phương thức mà trong đó loại dữ liệu 
+mà chúng hoạt động trên được chỉ định như một tham số. Bằng cách sử dụng generics, bạn có thể tạo ra một lớp đơn, 
+ví dụ, mà tự động làm việc với các loại dữ liệu khác nhau. 
+Một lớp, giao diện hoặc phương thức hoạt động 
+trên một loại dữ liệu được tham số hóa được gọi là generic, như lớp generic hoặc phương thức generic.
+
+Quan trọng là hiểu rằng Java luôn cho phép bạn tạo các lớp, giao diện và phương thức tổng quát 
+bằng cách hoạt động thông qua các tham chiếu của kiểu Object. Bởi vì Object là lớp cha của tất cả 
+các lớp khác, một tham chiếu Object có thể tham chiếu đến bất kỳ đối tượng kiểu nào. 
+Do đó, trong mã không sử dụng generics, các lớp, giao diện và phương thức tổng quát sử dụng tham chiếu Object 
+để hoạt động trên các loại đối tượng khác nhau. Vấn đề là chúng không thể làm điều này một cách an toàn về kiểu.
+
+Generics đã thêm tính an toàn kiểu dữ liệu mà thiếu sót. Họ cũng làm quy trình trở nên thông suốt hơn, 
+bởi vì không còn cần phải sử dụng các lệnh ép kiểu để dịch sang kiểu Object và kiểu dữ liệu đang được 
+hoạt động thực sự. Với generics, tất cả các lệnh ép kiểu đều được tự động và ngầm định. Do đó, generics mở rộng 
+khả năng tái sử dụng mã của bạn và cho phép bạn làm điều đó một cách an toàn và dễ dàng hơn.
+
+CẢNH BÁO 
+Lời Cảnh Báo cho các Lập trình viên C++: Mặc dù generics có nhiều điểm tương đồng với templates trong C++, 
+nhưng chúng không hoàn toàn giống nhau. Có một số khác biệt cơ bản giữa hai phương pháp về kiểu generic. 
+Nếu bạn có nền tảng về C++, quan trọng là không nên kết luận về cách generics hoạt động trong Java mà không nghiên cứu kỹ.

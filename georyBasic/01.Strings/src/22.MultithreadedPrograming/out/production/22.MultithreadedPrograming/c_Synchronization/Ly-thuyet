@@ -1,0 +1,16 @@
+Đồng bộ hoá
+Bởi vì multithreading giới thiệu một hành vi bất đồng bộ cho chương trình của bạn, 
+vì vậy phải có một cách để bạn bắt buộc đồng bộ hóa khi cần thiết. Ví dụ, nếu bạn muốn hai thread 
+giao tiếp và chia sẻ một cấu trúc dữ liệu phức tạp, chẳng hạn như một danh sách liên kết, bạn cần 
+một cách để đảm bảo rằng chúng không xung đột với nhau. Tức là, bạn phải ngăn một thread viết dữ liệu
+trong khi một thread khác đang đọc nó. Để giải quyết vấn đề này, Java triển khai một cách tiếp cận thanh lịch 
+cho mô hình đồng bộ hóa tiến trình tương tác: monitor. 
+Monitor là một cơ chế điều khiển được định nghĩa đầu tiên bởi C.A.R. Hoare. 
+Bạn có thể tưởng tượng một monitor là một chiếc hộp rất nhỏ chỉ có thể chứa một thread. 
+Một khi một thread vào monitor, tất cả các thread khác phải đợi cho đến khi thread đó thoát khỏi monitor. 
+Bằng cách này, monitor có thể được sử dụng để bảo vệ tài sản chung khỏi việc bị nhiều hơn một thread cùng thao tác đồng thời.
+Trong Java, không có lớp "Monitor"; thay vào đó, mỗi đối tượng có monitor ngầm định của riêng nó 
+được tự động nhập khi gọi một trong các phương thức đồng bộ hóa của đối tượng đó. 
+Một khi một thread đang ở trong một phương thức được đồng bộ hóa, không có thread nào khác có thể gọi 
+bất kỳ phương thức đồng bộ hóa nào khác trên cùng một đối tượng. Điều này cho phép bạn viết mã multithreaded 
+rõ ràng và ngắn gọn, vì hỗ trợ đồng bộ hoá được tích hợp vào ngôn ngữ.

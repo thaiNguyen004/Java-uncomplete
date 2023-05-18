@@ -1,0 +1,33 @@
+Hệ thống đa luồng của Java được xây dựng trên lớp Thread, các phương thức của nó 
+và giao diện đồng hành của nó, Runnable. 
+Lớp Thread đóng gói một luồng thực thi. Bởi vì bạn không thể trực tiếp tham chiếu 
+đến trạng thái mờ ảo của một luồng đang chạy, bạn sẽ xử lý thông qua proxy của nó, 
+đó là đối tượng Thread đã tạo ra nó. Để tạo một luồng mới, chương trình của bạn sẽ mở rộng 
+lớp Thread hoặc thực hiện giao diện Runnable.
+
+Lớp Thread định nghĩa một số phương thức giúp quản lý các thread. 
+Một số trong số đó được sử dụng trong chương này được hiển thị dưới đây:
+
+
+1. Phương thức getName() của lớp Thread dùng để trả về tên của luồng (thread) đó.
+
+2. Phương thức getPriority() dùng để trả về mức ưu tiên hiện tại của luồng (thread) đó.
+
+3. Phương thức isAlive() kiểm tra xem luồng (thread) đó có đang hoạt động hay không.
+
+4. Phương thức join() được sử dụng để đợi cho một luồng (thread) khác kết thúc. 
+Khi một luồng (thread) gọi phương thức join() trên một luồng (thread) khác, nó sẽ 
+chờ đến khi luồng đó kết thúc trước khi tiếp tục thực thi.
+
+5. Phương thức run() chứa mã lệnh mà luồng (thread) thực hiện khi được khởi tạo.
+
+6. Phương thức sleep() làm cho luồng (thread) hiện tại tạm dừng thực thi trong 
+một khoảng thời gian nhất định (được xác định bởi tham số đầu vào).
+
+7. Phương thức start() được sử dụng để khởi động một luồng (thread) mới. 
+Khi được gọi, phương thức này sẽ gọi phương thức run() của luồng (thread) để bắt đầu thực thi.
+
+Đến thời điểm này, tất cả các ví dụ trong cuốn sách này đều sử dụng một luồng thực thi duy nhất. 
+Phần còn lại của chương này sẽ giải thích cách sử dụng Thread và Runnable để tạo và quản lý các luồng, 
+bắt đầu với một luồng mà tất cả các chương trình Java đều có: luồng chính. 
+Main Thread

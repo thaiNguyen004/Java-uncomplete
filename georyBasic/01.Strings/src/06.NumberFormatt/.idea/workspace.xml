@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="838701f5-64aa-46f9-8110-b3ec308e0c6b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/JavaProfessional.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../00.LanguagesForm/.idea/00.LanguagesForm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01.Strings/.idea/01.Strings.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.StringBuffer/.idea/02.StringBuffer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.StringBuilder/.idea/03.StringBuilder.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04.JavaDate/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04.JavaDate/.idea/04.JavaDate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04.JavaDate/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05.BigDecimal/.idea/05.BigDecimal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/06.NumberFormatt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.Arrays/.idea/07.Arrays.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08.Collections/.idea/08.Collections.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09.Regex/.idea/09.Regex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10.Sets/.idea/10.Sets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11.Map/.idea/11.Map.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12.Stack/.idea/12.Stack.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../13.QueuesAndDeques/.idea/13.QueuesAndDeques.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14.StreamJava/.idea/14.StreamJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../15.GenericsJava/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../15.GenericsJava/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../15.GenericsJava/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../15.GenericsJava/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../15.GenericsJava/15.GenericsJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../16.JavaEnum/.idea/16.JavaEnum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../17.HashTableJava/.idea/17.HashTableJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../18.ObjectClassMethods/.idea/18.ObjectClassMethods.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../19.Operators/.idea/19.Operators.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20.ExceptionHandling/.idea/20.ExceptionHandling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../21.Classes/.idea/21.Classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../22.MultithreadedPrograming/22.MultithreadedPrograming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01.Strings/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02.StringBuffer/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/02.StringBuffer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.StringBuffer/out/production/02.StringBuffer/stringbuffer/StringBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.StringBuilder/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.JavaDate/src/java_date/Java_Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/../04.JavaDate/src/java_date/Java_Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.BigDecimal/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07.Arrays/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08.Collections/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.Regex/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.Sets/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/dictionaries/nguye.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.Map/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/11.Map.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/a_Introduce/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/basicMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/k_keySet_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/l_values_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/m_entrySet_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/n_getOrDefault_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/o_forEach_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/p_replaceAll_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/q_putIfAbsent_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/s_replace_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/u_computeIfAbsent_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/v_computeIfPresent_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/x_compute_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/b_StartedWithMethodsMap/y_merge_meth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/c_AbstractMap/CustomMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/c_AbstractMap/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/c_AbstractMap/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/a_HashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/b_TreeMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/c_LinkedHashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/d_IdentityHashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/e_EnumMap$Season.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/d_MapClasses/e_EnumMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/e_TheMapInterface/MapEntryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/e_TheMapInterface/NavigableMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/e_TheMapInterface/SortedMapInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/CompLastName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/CompThenByFirstName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/MyComp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/MyComp2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/SinhVien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/TComp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/compare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/nullsFirst_nullsLast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/out/production/11.Map/f_Comparators/then_comparing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.Map/src/f_Comparators/nullsFirst_nullsLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.Map/src/f_Comparators/nullsFirst_nullsLast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.Stack/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13.QueuesAndDeques/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14.StreamJava/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/src/h_BoundedWildcards/example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15.GenericsJava/src/h_BoundedWildcards/example.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.JavaEnum/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17.HashTableJava/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18.ObjectClassMethods/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.Operators/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20.ExceptionHandling/src/TryCatchWithMultipleCatches/example.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20.ExceptionHandling/src/TryCatchWithMultipleCatches/example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21.Classes/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/a_LyThuyet/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/a_LyThuyet/MultithreadedPrograming.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/b_ThreadModel/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/b_ThreadModel/ThreadPriorities" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/c_Synchronization/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/d_Messages/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/e_ThreadClassAndRunableInterface/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/f_MainThread/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/f_MainThread/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/ExtendingThread" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/ExtendingThread$NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/ExtendingThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/ImplementRunable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/ImplementingRunable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/g_CreatingThread/describle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/h_CreatingMultipleThread/MultipleThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/h_CreatingMultipleThread/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/k_isAlive_join_methods/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/k_isAlive_join_methods/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/k_isAlive_join_methods/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/m_ThreadPriority/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/n_Synchronization/Caller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/n_Synchronization/Callme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/n_Synchronization/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/n_Synchronization/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/o_SynchronizedStatement/Caller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/o_SynchronizedStatement/Callme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/o_SynchronizedStatement/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Consumer2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Producer2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Q.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/Q2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/p_InterthreadCommunication/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/q_DeadLock/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/q_DeadLock/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/q_DeadLock/DeadLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/q_DeadLock/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/q_DeadLock/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/s_SuspendResumeAndStopThread/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/s_SuspendResumeAndStopThread/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/s_SuspendResumeAndStopThread/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/t_ThreadsState/Ly-thuyet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/t_ThreadsState/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/t_ThreadsState/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_UsingFactoryMethodToCreateAndStartThread/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_UsingFactoryMethodToCreateAndStartThread/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/MyClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/NewThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/class1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/class2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/build/classes/v_practices/class3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.MultithreadedPrograming/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/MapDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/dao/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/dao/StudentDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/view/View.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/view/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/src/mergesort/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thuat-toan/Algorithm-sort/mergeSort/src/mergesort/jfakflj.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2PvgG64Y7eECZqDbyT8p5UQcO7F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Studyspace/Java/JavaProfessional/Ly-thuyet/06.NumberFormatt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="838701f5-64aa-46f9-8110-b3ec308e0c6b" name="Changes" comment="" />
+      <created>1684344801328</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684344801328</updated>
+      <workItem from="1684344802350" duration="196000" />
+      <workItem from="1684345012818" duration="431000" />
+      <workItem from="1684345452307" duration="253000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

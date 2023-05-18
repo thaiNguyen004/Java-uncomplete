@@ -1,0 +1,30 @@
+Đôi khi, mặc dù type safety (tính an toàn về kiểu) là rất hữu ích, nhưng nó cũng có thể gây 
+trở ngại đối với các cấu trúc hoàn toàn hợp lệ. Ví dụ, giả sử bạn có một lớp Stats như được 
+hiển thị ở cuối phần trước, và bạn muốn thêm một phương thức được gọi là sameAvg() để xác định 
+xem hai đối tượng Stats có chứa mảng có trung bình bằng nhau hay không, bất kể loại dữ liệu 
+số học mà mỗi đối tượng giữ. Ví dụ, nếu một đối tượng chứa các giá trị double 1.0, 2.0 và 3.0, 
+và đối tượng khác chứa các giá trị integer 2, 1 và 3, thì trung bình sẽ là giống nhau. Một cách 
+để triển khai sameAvg() là truyền cho nó một đối số Stats và sau đó so sánh trung bình của đối số 
+đó với đối tượng gọi, chỉ trả về true nếu các trung bình giống nhau. 
+Ví dụ, bạn muốn có thể gọi sameAvg(), như được hiển thị ở đây: 
+
+    Integer inums[] = {1,2,3};
+    Dounle dnums [] = {1.0, 2.0, 3.0};
+    Stats<Integer> ob = new Stats<Integer> (inums);
+    Stats<Integer> ob = new Stats<Double> (dnums);
+
+Ban đầu, việc tạo sameAvg() dường như là một vấn đề đơn giản. 
+Vì Stats là kiểu chung và phương thức trung bình (average()) của nó có thể hoạt động trên bất kỳ lại đối tượng Stats nào, 
+vì vậy tạo sameAvg() có vẻ sẽ dễ dàng. Tuy nhiên, vấn đề bắt đầu ngay khi bạn cố gắng khai báo một tham số kiểu Stats. 
+Vì Stats là một kiểu tham số hóa, bạn phải chỉ định gì cho tham số kiểu của Stats khi bạn khai báo một tham số của kiểu đó?
+
+Cách làm này sẽ chỉ hoạt động với các đối tượng Stats khác có cùng loại với đối tượng gọi.
+Ví dụ, nếu đối tượng gọi là kiểu Stats <Integer>, thì tham số ob cũng phải là kiểu Stats <Integer>. 
+Nó không thể được sử dụng để so sánh trung bình của một đối tượng kiểu Stats <Double> với 
+trung bình của một đối tượng kiểu Stats <Short>, ví dụ. 
+Do đó, cách tiếp cận này sẽ không hoạt động trừ khi ở trong một ngữ cảnh rất hẹp 
+và không cho một giải pháp chung (tức là kiểu chung).
+
+Để tạo ra một phương thức sameAvg() phổ quát, bạn phải sử dụng một tính năng khác của generic trong Java, 
+đó là wildcard argument. Wildcard argument được chỉ định bởi dấu ?, và nó đại diện cho một kiểu không xác định. 
+Bằng cách sử dụng wildcard argument, đây là một cách để viết phương thức sameAvg(): example.java

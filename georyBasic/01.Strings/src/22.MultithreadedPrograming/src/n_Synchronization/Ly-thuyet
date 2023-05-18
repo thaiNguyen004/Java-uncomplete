@@ -1,0 +1,30 @@
+Đồng bộ hóa
+Khi hai hoặc nhiều hơn các luồng cần truy cập vào một tài nguyên chia sẻ, chúng cần 
+một cách nào đó để đảm bảo rằng tài nguyên sẽ chỉ được sử dụng bởi một luồng một lúc. 
+Quá trình này được gọi là đồng bộ hóa. 
+Như bạn sẽ thấy, Java cung cấp hỗ trợ duy nhất trên cấp độ ngôn ngữ cho nó.
+
+Chìa khóa cho việc đồng bộ hóa là khái niệm của bộ giám sát (monitor). Một monitor được 
+sử dụng như một khóa độc quyền, nghĩa là chỉ có một luồng có thể sở hữu một monitor 
+trong một thời điểm nhất định. Khi một luồng sở hữu một monitor, nó được cho là đã 
+nhập vào monitor đó. Các luồng khác cố gắng truy cập vào monitor bị khóa sẽ bị đình chỉ (suspended) 
+cho đến khi luồng đầu tiên thoát khỏi monitor. Những luồng khác được gọi là đang chờ monitor.
+
+Nếu một luồng sở hữu một monitor, nó có thể quyết định nhập lại cùng monitor đó nếu nó muốn. 
+Tuy nhiên, điều này chỉ xảy ra nếu luồng đó đã giải phóng khóa độc quyền của monitor. 
+Nếu khóa độc quyền của monitor vẫn còn được sử dụng bởi luồng khác, 
+thì luồng muốn sử dụng monitor phải chờ cho đến khi khóa độc quyền được giải phóng.
+
+Bạn có thể đồng bộ hóa mã của mình theo một trong hai cách. 
+Cả hai cách đều liên quan đến việc sử dụng từ khóa synchronized và cả hai sẽ được xem xét ở đây.
+
+• Using Synchronized Methods
+Đồng bộ hóa rất đơn giản trong Java, bởi vì tất cả các đối tượng đều có bộ giám sát ẩn 
+của chính nó được liên kết với chúng. Để nhập vào bộ giám sát của một đối tượng, 
+chỉ cần gọi một phương thức đã được sửa đổi với từ khóa synchronized. Trong khi một luồng 
+đang ở bên trong một phương thức synchronized, tất cả các luồng khác cố gắng gọi nó 
+(hoặc bất kỳ phương thức synchronized nào khác) trên cùng một thể hiện phải đợi. 
+Để thoát khỏi bộ giám sát và nhường quyền kiểm soát của đối tượng cho luồng đợi tiếp theo, 
+chủ sở hữu của bộ giám sát đơn giản trả về từ phương thức synchronized.
+
+Xem ví dụ trong file example.java

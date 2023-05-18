@@ -1,0 +1,39 @@
+Singleton là gì?
+-Singleton là một mẫu thiết kế phần mềm cho phép chỉ tạo ra một đối tượng duy nhất từ một lớp 
+và cung cấp một cách để truy cập đối tượng này từ bất kỳ đâu trong ứng dụng.
+-Trong Java, Singleton thường được triển khai bằng cách sử dụng một lớp với một phương thức static 
+trả về một đối tượng duy nhất. 
+    
+-Tuy nhiên, một cách tiếp cận khác là triển khai Singleton bằng enum, với một phần tử đơn duy nhất.
+
+-Khi một enum được sử dụng lần đầu tiên, các hằng số của nó được khởi tạo và giá trị của chúng được xác định.
+Do đó, việc triển khai Singleton bằng enum cho phép tạo ra một đối tượng duy nhất của enum đó, 
+vì chỉ có một phiên bản của enum được tạo ra trong suốt vòng đời của ứng dụng. 
+
+Điều này làm cho triển khai Singleton bằng enum trở nên đơn giản và an toàn hơn so với cách tiếp cận truyền thống sử dụng lớp với phương thức static.
+
+-Vì vậy, khi sử dụng enum, ta không cần phải quan tâm đến vấn đề đồng bộ hóa và tránh được các lỗi liên quan đến đa luồng (multi-threading).
+
+Cách tiếp cận này có các ưu điểm như sau: 
+_Đảm bảo an toàn luồng
+_Đảm bảo khởi tạo duy nhất
+_
+
+What is the Singleton?
+-Singleton is a software design pattern that allows only one instance of a class to be created and provides (cung cấp)
+a way to access this object form anywhere in the application
+
+-In Java, Singleton is commonly (thường) implemented using a class with a static method that return a single object. However,
+another approach(tiếp cận) is to implement Singleton using an enum with single element 
+-When an enum is first used, its constants are initialized (khởi tạo) and  their values are determined (xác định)
+Therefore, implementing singleton using an enum allows creating a single object of that enum, as only one instance (phiên bản) of the enum is 
+created throughout (xuyên suốt) the application's lifetime(vòng đời). 
+This makes (tạo ra, làm cho) implementing singleton using an enum simpler (đơn giản) and safer (an toàn) than the traditional (truyền thống)
+approach (tiếp cận) using a class with static method.
+ 
+So(vì vậy) when using enum, we dont need to care about synchronization (đồng bộ hóa) and threading errors
+
+This approach has following advantages: 
+_thread safety
+_guarantee of single instantiation
+_out-of-the-box serialization

@@ -1,0 +1,50 @@
+• Throwable là lớp cha của các lớp Exception và Error
+• Khi một ngoại lệ hay một lỗi xảy ra chúng có thể được ném ra bằng từ khóa throw
+và được bắt bằng cấu trúc try...catch. Việc ném ra ngoại lệ có thể được thực hiện trong 
+bất kỳ phương thức nào trong chương trình
+
+Một ngoại lệ(exception) có thể được bắt (caught) và sử lý (handled) bằng cách sử dụng 
+câu lệnh (statement) try...catch. Trong thực tế (In fact), try statement có nhiều kiểu khác nhau
+
+//Hành động trong một try...catch đơn giản sẽ như sau:
+• Các câu lệnh trong khối try sẽ được thực thi
+• Nếu không có ngoại lệ nào được ném ra bởi khối try thì chương trình sẽ tiếp tục chuyển tới các
+câu lệnh tiếp theo sau khối try...catch
+• Nếu ngoại lệ được ném ra bên trong khối try
+    ° Đối tượng ngoại lệ cần được kiểm tra xem có phải là một trường hợp của lớp Exception 
+      trong khối catch không, hoặc là một lớp con của lớp đó hay không.
+    ° Nếu đúng là vậy thì khối catch sẽ bắt ngoại lệ
+        ▪ Chương trình sẽ gán đối tượng ngoại lệ đó cho một biến e hoặc bất kỳ biến nào được 
+          định nghĩa bên trong khối catch
+        ▪ Nếu mã trong khối catch ném ra một ngoại lệ khác, ngoại lệ mới này sẽ được lan truyền
+          thay cho ngoại lệ ban đầu.
+        ▪ Nếu không có ngoại lệ nào được ném ra từ khối catch hoặc từ khối catch lan truyền,
+          chương trình sẽ tiếp tục thực thi câu lệnh tiếp tu không có ngoại lệ nào được ném ra từ khối catch hoặc từ khối catch heo
+• Nếu không tìm thấy khối catch nào phù hợp để sử lý ngoại lệ, ngoại lệ ban đầu sẽ tiếp
+tục được lan truyền tới khối catch tiếp theo, còn nếu không có khối catch nào thì sẽ gây 
+ra hiện tượng không xử lý được ngoại lệ (unhanded exception)
+
+→ Try-catch với một khối catch:
+
+° Tính chất
+▪ Sử dụng một khối catch duy nhất để xử lý các loại ngoại lệ khác nhau.
+▪ Trong khối catch, phải sử dụng câu lệnh điều kiện để phân biệt các loại ngoại lệ.
+    Nếu không sử dụng câu lệnh điều kiện trong khối catch, tất cả các ngoại lệ đều được xử lý
+    bằng cách sử dụng cùng một mã lệnh, điều này có thể không phù hợp với một số trường hợp.
+
+→ Try-catch với nhiều khối catch:
+
+° Tính chất
+▪ Sử dụng nhiều khối catch để xử lý các loại ngoại lệ khác nhau.
+▪ Mỗi khối catch xử lý một loại ngoại lệ cụ thể, vì vậy không cần phải sử dụng câu lệnh điều kiện.
+▪ Các khối catch được sắp xếp theo thứ tự từ ngoại lệ chính xác nhất đến ngoại lệ chung nhất.
+
+Nếu có nhiều khối catch, chúng sẽ thử lần lượt từng khối catch với khối đầu tiên
+, cho đến khi tìm thấy kết quả phù hợp cho ngoại lệ, trình sử lý (handle) tương ứng 
+sẽ được thực thi, và sau đó quyền điều khiển sẽ chuyển đến câu lệnh tiếp theo
+
+//Lưu ý: Chiến lược top-down có thể xảy ra tình huống không mong muốn khi xử lý ngoại lệ
+Ví dụ: Nếu 2 ngoại lệ được liệt kê trong khối catch gần như giống nhau quá mức, 
+và chương trình luôn xử lý các khối catch từ trên xuống dưới (mà nó tìm thấy), thậm chí nó có thể
+sẽ đi vào một khối catch mà nó không phải là một khối catch phù hợp nhất, do đó điều này có thể gây ra hậu 
+quả

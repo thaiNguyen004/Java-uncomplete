@@ -1,0 +1,31 @@
+• Hai khái niệm quan trọng để hiểu cách Java triển khai biểu thức lambda là hai cấu trúc. 
+	Cấu trúc đầu tiên là biểu thức lambda chính nó. 
+	Cấu trúc thứ hai là giao diện chức năng (functional interface). 
+
+Hãy bắt đầu với một định nghĩa đơn giản về mỗi khái niệm.
+
+Biểu thức lambda, đơn giản là một phương thức ẩn danh (không tên). 
+Tuy nhiên, phương thức này không được thực thi một mình. Thay vào đó, nó được sử dụng 
+để triển khai một phương thức được xác định bởi một giao diện chức năng (functional interface). 
+Do đó, một biểu thức lambda kết quả trong một dạng của một lớp ẩn danh. 
+Biểu thức lambda còn được gọi là closures (đóng gói).
+
+Một giao diện chức năng là một giao diện chứa một và chỉ một phương thức trừu tượng. 
+Thông thường, phương thức này chỉ định mục đích dự định của giao diện. 
+Vì vậy, một giao diện chức năng thường đại diện cho một hành động duy nhất. 
+Ví dụ, giao diện Runnable tiêu chuẩn là một giao diện chức năng vì nó chỉ định một 
+phương thức duy nhất: run(). Do đó, run() xác định hành động của Runnable. 
+Hơn nữa, một giao diện chức năng xác định kiểu mục tiêu của một biểu thức lambda. 
+Đây là một điểm quan trọng: một biểu thức lambda chỉ có thể được sử dụng trong 
+ngữ cảnh trong đó kiểu mục tiêu của nó được xác định. Một điều khác: một giao diện chức năng 
+đôi khi được gọi là một kiểu SAM, trong đó SAM là viết tắt của Single Abstract Method 
+(một phương thức trừu tượng duy nhất).
+
+LƯU Ý: Một giao diện chức năng có thể xác định bất kỳ phương thức công cộng nào 
+được định nghĩa bởi Object, chẳng hạn như equals(), mà không ảnh hưởng đến 
+trạng thái "giao diện chức năng" của nó. 
+Các phương thức công cộng của Object được coi là thành viên ngầm định của một 
+giao diện chức năng vì chúng được tự động triển khai bởi một phiên bản 
+của giao diện chức năng.
+
+Bây giờ chúng ta hãy xem xét kỹ hơn cả biểu thức lambda và giao diện chức năng.

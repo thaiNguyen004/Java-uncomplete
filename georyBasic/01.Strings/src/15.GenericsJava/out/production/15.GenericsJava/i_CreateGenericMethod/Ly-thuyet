@@ -1,0 +1,35 @@
+Như những ví dụ trước đó đã cho thấy, các phương thức bên trong một lớp generic có thể sử dụng tham số kiểu 
+của lớp và do đó là generic đối với tham số kiểu. Tuy nhiên, có thể khai báo một phương thức generic 
+sử dụng một hoặc nhiều tham số kiểu riêng của nó. Hơn nữa, có thể tạo một phương thức generic được 
+bao quanh bởi một lớp không generic : example.java
+
+Hãy xem xét isIn () kỹ. Trước hết, hãy lưu ý cách nó được khai báo bởi dòng này:
+static <T extends Comparable<T>, V extends T> boolean isIn(T x, V[] y) {
+Các tham số kiểu được khai báo trước kiểu trả về của phương thức. Lưu ý rằng T extends Comparable<T>. 
+Comparable là một giao diện được khai báo trong java.lang. Một lớp thực hiện Comparable xác định các 
+đối tượng có thể được sắp xếp. Do đó, yêu cầu giới hạn trên Comparable đảm bảo rằng isIn() 
+chỉ có thể được sử dụng với các đối tượng có thể được so sánh được. Comparable là một lớp chung, 
+và tham số kiểu của nó chỉ định kiểu đối tượng mà nó so sánh. Tham số kiểu của Comparable có tác dụng 
+là chỉ định kiểu đối tượng mà đối tượng hiện tại của Comparable có thể so sánh được. 
+Ví dụ, nếu một lớp MyObject implements Comparable<MyObject>, thì nó có thể so sánh được 
+với các đối tượng khác của kiểu MyObject. Thông qua việc chỉ định tham số kiểu, ta có thể đảm bảo 
+rằng chỉ có các đối tượng có kiểu tương tự nhau mới có thể so sánh được với nhau. 
+(Sau đây, bạn sẽ thấy cách tạo một giao diện chung.) Tiếp theo, lưu ý rằng kiểu V được giới hạn bởi T. 
+Do đó, V phải là cùng kiểu với T hoặc là một lớp con của T. Mối quan hệ này đảm bảo rằng isIn () chỉ 
+có thể được gọi với các đối số tương thích với nhau. Hãy lưu ý rằng isIn () là tĩnh, cho phép nó được 
+gọi độc lập với bất kỳ đối tượng nào. Tuy nhiên, phương thức chung có thể là tĩnh hoặc không tĩnh. 
+Không có hạn chế nào trong vấn đề này.
+
+Chú ý cách hàm isIn() được gọi trong main() bằng cách sử dụng cú pháp gọi thông thường mà không cần 
+chỉ định các đối số kiểu. Điều này là do các kiểu của các đối số được tự động phân biệt và kiểu của 
+T và V được điều chỉnh tương ứng. Ví dụ, trong cuộc gọi đầu tiên:
+if (isIn(2, nums))
+kiểu của đối số đầu tiên là Integer (do tự động đóng gói), điều này dẫn đến Integer được thay thế cho T. 
+Kiểu cơ bản của đối số thứ hai cũng là Integer, khiến cho Integer cũng được thay thế cho V. 
+Trong cuộc gọi thứ hai, các kiểu String được sử dụng và kiểu của T và V được thay thế bằng String.
+
+Mặc dù việc suy luận kiểu sẽ đủ cho hầu hết các cuộc gọi phương thức thông thường, bạn vẫn có thể chỉ định rõ ràng 
+đối số kiểu nếu cần thiết. Ví dụ, đây là cách cuộc gọi đầu tiên của isIn() trông như khi đối số kiểu được chỉ định:
+GenMethDemo.<Integer, Integer>isIn(2, nums)
+Tuy nhiên, trong trường hợp này, không có gì được lợi bằng cách chỉ định đối số kiểu. Hơn nữa, JDK 8 đã cải thiện 
+suy luận kiểu liên quan đến phương thức. Kết quả là, có ít trường hợp hơn trong đó cần chỉ định rõ ràng các đối số kiểu cho phương thức.

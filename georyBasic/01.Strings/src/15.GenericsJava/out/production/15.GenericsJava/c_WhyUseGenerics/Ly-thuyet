@@ -1,0 +1,8 @@
+Ở thời điểm này, bạn có thể tự đặt cho mình câu hỏi sau đây: Vì sao phải sử dụng kiểu dữ liệu generic 
+trong lớp Gen khi chúng ta có thể đạt được cùng chức năng bằng cách chỉ định Object là kiểu dữ liệu 
+và sử dụng các phép ép kiểu đúng cách? Câu trả lời là generic đảm bảo an toàn kiểu của tất cả các 
+hoạt động liên quan đến Gen. Trong quá trình đó, chúng loại bỏ nhu cầu phải nhập các phép ép kiểu 
+và kiểm tra kiểu mã bằng tay.
+
+Để hiểu được lợi ích của generic, trước hết hãy xem xét chương trình sau đây 
+tạo ra một phiên bản không generic của lớp Gen: file example.java

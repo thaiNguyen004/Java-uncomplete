@@ -1,0 +1,40 @@
+• Các cơ bản về Biểu thức Lambda
+Biểu thức lambda đã giới thiệu một phần tử cú pháp và toán tử mới vào ngôn ngữ Java. 
+Toán tử mới, đôi khi được gọi là toán tử lambda hoặc toán tử mũi tên, là −>. 
+• Nó chia một biểu thức lambda thành hai phần. 
+	Phía trái chỉ định bất kỳ tham số nào cần thiết bởi biểu thức lambda. 
+(Nếu không cần tham số, ta sử dụng danh sách tham số trống.) 
+	Phía phải là thân lambda, chỉ định các hành động của biểu thức lambda. 
+Dấu −> có thể diễn đạt thành "trở thành" hoặc "đi đến".
+
+• Java định nghĩa hai loại thân lambda. Một loại bao gồm một biểu thức duy nhất 
+và loại khác bao gồm một khối mã. Chúng ta sẽ bắt đầu với những lambda định nghĩa một 
+biểu thức duy nhất. Các lambda với thân khối sẽ được thảo luận sau trong chương này.
+
+• Ở điểm này, sẽ hữu ích nếu chúng ta xem một vài ví dụ về biểu thức lambda trước khi tiếp tục. 
+Hãy bắt đầu với cái có lẽ là loại đơn giản nhất của biểu thức lambda bạn có thể viết. 
+Nó đánh giá thành một giá trị hằng số và được hiển thị như sau:
+	() -> 123.45
+	
+• Biểu thức lambda này không có tham số, do đó danh sách tham số là rỗng. 
+Nó trả về giá trị hằng số 123.45. Do đó, nó tương tự như phương thức sau đây:
+	
+	double myMeth() { return 123.45; }
+	
+Tất nhiên, phương thức được định nghĩa bởi một biểu thức lambda không có tên.
+Một biểu thức lambda đáng chú ý hơn một chút được hiển thị như sau:
+
+	() -> Math.random() * 100
+	
+Biểu thức lambda này lấy giá trị giả ngẫu nhiên từ Math.random(), 
+nhân nó với 100 và trả về kết quả. Nó cũng không yêu cầu một tham số.
+• Khi một biểu thức lambda yêu cầu một tham số, nó được chỉ định trong danh sách 
+tham số bên trái của toán tử lambda. Dưới đây là một ví dụ đơn giản:
+
+(n) -> (n % 2) == 0
+
+Biểu thức lambda này trả về true nếu giá trị của tham số n là số chẵn. 
+• Mặc dù có thể chỉ định rõ ràng kiểu của một tham số, như n trong trường hợp này, 
+thường thì bạn không cần phải làm điều đó vì trong nhiều trường hợp kiểu của tham số 
+có thể được suy luận. Tương tự như một phương thức có tên, 
+một biểu thức lambda có thể chỉ định bất kỳ số lượng tham số nào cần thiết.

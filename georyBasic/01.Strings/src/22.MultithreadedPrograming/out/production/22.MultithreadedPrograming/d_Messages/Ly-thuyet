@@ -1,0 +1,10 @@
+Messages
+Sau khi chia chương trình của bạn thành các thread riêng biệt, bạn cần xác định 
+cách chúng sẽ giao tiếp với nhau. Khi lập trình với một số ngôn ngữ khác, bạn phải 
+phụ thuộc vào hệ điều hành để thiết lập giao tiếp giữa các thread. 
+Điều này, tất nhiên, tăng thêm chi phí. Ngược lại, Java cung cấp một cách rõ ràng 
+và chi phí thấp cho hai hoặc nhiều thread để nói chuyện với nhau, thông qua các 
+cuộc gọi đến các phương thức được định nghĩa trước đó mà tất cả các đối tượng đều có. 
+Hệ thống gửi tin nhắn của Java cho phép một thread vào một phương thức được đồng bộ hóa 
+trên một đối tượng, và sau đó chờ đợi tại đó cho đến khi một thread khác thông báo cho 
+nó thoát ra một cách rõ ràng.

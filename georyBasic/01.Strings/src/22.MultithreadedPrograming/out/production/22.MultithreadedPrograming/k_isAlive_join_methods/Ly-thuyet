@@ -1,0 +1,45 @@
+    Như đã đề cập, thường thì bạn muốn luồng chính kết thúc cuối cùng. Trong các ví dụ trước đó, 
+điều này được thực hiện bằng cách gọi hàm sleep() trong hàm main(), với độ trễ đủ lớn để đảm bảo 
+tất cả các luồng con kết thúc trước luồng chính. Tuy nhiên, đây không phải là một giải pháp 
+đáp ứng được và nó cũng đặt ra một câu hỏi lớn hơn: 
+
+Làm thế nào một luồng có thể biết khi một luồng khác đã kết thúc?
+
+    May mắn thay, Thread cung cấp một cách để bạn có thể trả lời câu hỏi này. 
+Có hai cách để xác định xem một luồng đã kết thúc hay chưa. 
+Trước tiên, bạn có thể gọi isAlive() trên luồng đó. Phương thức này được định nghĩa bởi lớp Thread, 
+và dạng tổng quát của nó được hiển thị ở đây: 
+
+    final boolean isAlive()
+
+Phương thức isAlive() trả về true nếu luồng mà nó được gọi đến vẫn đang chạy. Nó trả về false nếu không còn chạy nữa.
+
+Mặc dù isAlive() đôi khi hữu ích, phương thức mà bạn sẽ sử dụng thường xuyên hơn 
+để đợi một luồng kết thúc được gọi là join(). 
+
+Phương thức này đợi đến khi luồng mà nó được gọi đến kết thúc. Tên của nó xuất phát từ 
+khái niệm của luồng gọi đợi cho đến khi luồng được chỉ định kết nối với nó. 
+Các dạng bổ sung của join() cho phép bạn chỉ định một khoảng thời gian tối đa mà bạn muốn đợi 
+cho luồng được chỉ định kết thúc.
+Dưới đây là một phiên bản cải tiến của ví dụ trước đó sử dụng join() để đảm bảo rằng 
+luồng chính là luồng cuối cùng dừng lại. Nó cũng thể hiện phương thức isAlive().
+
+
+Khi một đối tượng thread gọi đến phương thức join(), nó sẽ chờ đến khi thread đó hoàn thành việc 
+thực thi mới thoát ra khỏi phương thức join(). Trong trường hợp này, chính là 3 đối tượng 
+thread thread1.t, thread2.t, thread3.t gọi đến join(), có nghĩa là main thread sẽ phải đợi cho đến 
+khi tất cả các đối tượng thread này thực thi xong mới tiếp tục thực hiện những công việc tiếp theo.
+
+Tóm lại, 3 đối tượng thread thread1.t, thread2.t, thread3.t đang chạy độc lập và không đồng bộ với main thread. 
+Tuy nhiên, khi chúng gọi đến phương thức join(), main thread sẽ bị block (chặn) và chờ đến khi 
+chúng hoàn thành việc thực thi mới tiếp tục.
+
+
+Giải thích "3 đối tượng thread thread1.t, thread2.t, thread3.t đang chạy độc lập và không đồng bộ với main thread": 
+
+có nghĩa là chúng sẽ chạy song song với main thread, không phụ thuộc vào sự thực thi của main thread 
+và có thể chạy cùng lúc với nhau.
+Tuy nhiên, do các thread này chạy song song, nên có khả năng xảy ra tình huống xung đột tài nguyên (resource conflict) 
+khi cùng truy cập vào một tài nguyên (ví dụ như biến, file...) trong quá trình thực thi. 
+Để tránh xảy ra tình huống này, cần sử dụng các kỹ thuật đồng bộ hóa để quản lý 
+ivệc truy cập tài nguyên chung giữa các thread.

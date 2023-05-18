@@ -1,0 +1,54 @@
+• Java Collections Framework chuẩn hóa cách mà các nhóm đối tượng được xử lý trong chương trình của bạn. 
+Các cấu trúc collection không phải là một phần của phiên bản ban đầu của Java, mà được thêm vào bởi J2SE 1.2. 
+Trước khi có Collections Framework, Java cung cấp các lớp tạm thời như:  
+Dictionary, Vector, Stack và Properties để lưu trữ và thao tác với các nhóm đối tượng. Mặc dù các lớp này 
+rất hữu ích, nhưng thiếu một chủ đề chung, một sự thống nhất. Cách sử dụng Vector khác với cách sử dụng 
+Properties, ví dụ. Ngoài ra, cách tiếp cận tạm thời ban đầu này không được thiết kế để dễ dàng mở rộng 
+hoặc thích ứng. Collections Framework ra đời nhằm giải quyết những vấn đề này (và các vấn đề khác).
+
+• Collections Framework được thiết kế để đáp ứng một số mục tiêu. Trước hết, framework phải có hiệu suất cao. 
+Các triển khai cho các cấu trúc collection cơ bản (mảng động, danh sách liên kết, cây, và bảng băm) là rất hiệu quả. 
+Bạn hiếm khi cần phải viết mã thủ công cho một trong những "cấu trúc dữ liệu" này. 
+Thứ hai, framework phải cho phép các loại collection khác nhau hoạt động theo cách tương tự 
+và với mức độ tương tác cao. Thứ ba, việc mở rộng và/hoặc thích ứng một collection phải dễ dàng. 
+Vì vậy, toàn bộ Collections Framework được xây dựng dựa trên một tập hợp các giao diện tiêu chuẩn. 
+Có một số triển khai tiêu chuẩn (như LinkedList, HashSet và TreeSet) của các giao diện này được cung cấp 
+để bạn có thể sử dụng ngay. Bạn cũng có thể tự triển khai một collection riêng của mình, 
+nếu bạn muốn. Các triển khai đặc biệt cho mục đích cụ thể được tạo ra để thuận tiện cho bạn, 
+và một số triển khai một phần được cung cấp để giúp việc tạo ra lớp collection riêng của bạn dễ dàng hơn. 
+Cuối cùng, đã thêm các cơ chế cho phép tích hợp của mảng tiêu chuẩn vào Collections Framework.
+
+• Thuật toán là một phần quan trọng khác của cơ chế collection. Các thuật toán hoạt động trên các collection 
+và được định nghĩa là các phương thức tĩnh trong lớp Collections. Do đó, chúng có sẵn cho tất cả các collection. 
+Mỗi lớp collection không cần phải triển khai các phiên bản thuật toán riêng của mình. 
+Các thuật toán cung cấp một phương tiện tiêu chuẩn để thao tác với các collection.
+Một mục khác mật thiết liên quan đến Collections Framework là giao diện Iterator. Một 
+iterator cung cấp một cách tiêu chuẩn, thông dụng để truy cập vào các phần tử trong một collection , 
+một lần một phần tử. Do đó, một iterator cung cấp một phương tiện để đếm số lượng các phần tử trong một collection. 
+Vì mỗi collection đều cung cấp một iterator, các phần tử của bất kỳ lớp collection nào cũng có thể được truy cập thông 
+qua các phương thức được định nghĩa bởi Iterator. Vì vậy, chỉ với những thay đổi nhỏ, mã mà lặp qua một tập hợp có thể 
+được sử dụng để lặp qua một danh sách chẳng hạn.
+
+• JDK 8 đã thêm một loại iterator khác gọi là spliterator. Để tóm gọn, spliterator là các iterator 
+cung cấp hỗ trợ cho việc lặp qua các phần tử một cách song song. Các giao diện hỗ trợ spliterator là Spliterator 
+và một số giao diện lồng nhau hỗ trợ các kiểu dữ liệu nguyên thủy. JDK 8 cũng đã thêm các giao diện iterator 
+được thiết kế cho việc sử dụng với các kiểu dữ liệu nguyên thủy, như PrimitiveIterator và PrimitiveIterator.OfDouble.
+
+• Ngoài các collection, framework định nghĩa một số giao diện và lớp map. Map lưu trữ các cặp key/value. 
+Mặc dù map là một phần của Collections Framework, nhưng chúng không được gọi là "collections" theo nghĩa hẹp của thuật ngữ. 
+Tuy nhiên, bạn có thể lấy được một "collection-view" của một map. Một "collection-view" chứa các phần tử từ map 
+được lưu trữ trong một collection. Do đó, bạn có thể xử lý nội dung của một map như là một collection, nếu bạn muốn.
+
+• Cơ chế collection đã được tích hợp vào một số lớp gốc trong gói java.util. Điều này có nghĩa là các lớp gốc 
+như Dictionary, Vector, Stack và Properties cũng có thể sử dụng các tính năng của cơ chế collection. 
+Việc này mang lại lợi ích là chúng ta có một cách tiêu chuẩn và thống nhất để làm việc với các nhóm đối tượng.
+Quan trọng là hiểu rằng việc thêm cơ chế collection không làm cho các lớp gốc trở nên lỗi thời hay 
+không còn được sử dụng nữa. Thay vào đó, cơ chế collection chỉ cung cấp một cách tốt hơn 
+để làm một số công việc. Nó giúp chúng ta thực hiện các hoạt động như lưu trữ, truy xuất và thao tác với 
+nhóm các đối tượng một cách dễ dàng và tiện lợi hơn.
+Vì vậy, sự thêm vào của cơ chế collection là một cải tiến, một phương pháp tốt hơn để làm việc 
+với các nhóm đối tượng, nhưng không có nghĩa là các lớp gốc trở nên không hợp lệ hay không còn sử dụng được.
+
+• GHI CHÚ: Nếu bạn quen thuộc với ngôn ngữ C++, thì việc biết rằng công nghệ collections của Java tương tự như 
+Standard Template Library (STL) trong C++ sẽ hữu ích. Điều mà C++ gọi là container, Java gọi là collection. 
+Tuy nhiên, có những khác biệt đáng kể giữa Collections Framework và STL. Quan trọng là không nên vội kết luận.

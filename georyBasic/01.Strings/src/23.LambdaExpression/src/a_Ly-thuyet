@@ -1,0 +1,22 @@
+• Trong quá trình phát triển và tiến hóa của Java, nhiều tính năng đã 
+được thêm vào kể từ phiên bản ban đầu 1.0. Tuy nhiên, có hai tính năng nổi bật 
+vì chúng đã thay đổi mạnh mẽ ngôn ngữ, thay đổi cách viết mã. 
+• Tính năng đầu tiên là generics, được thêm vào bởi JDK 5. (Xem Chương 14.) 
+• Tính năng thứ hai là biểu thức lambda, đây là chủ đề của chương này. 
+Được thêm vào từ JDK 8, biểu thức lambda (và các tính năng liên quan) 
+đã nâng cao đáng kể Java với hai lý do chính. 
+	Thứ nhất, chúng đã thêm các phần tử cú pháp mới tăng khả năng diễn đạt của ngôn ngữ. 
+Trong quá trình đó, chúng đã tối ưu hóa cách thức thực hiện một số cấu trúc thông thường. 
+	Thứ hai, việc thêm biểu thức lambda đã dẫn đến việc tích hợp các khả năng mới vào 
+thư viện API. Trong số những khả năng mới này, có khả năng tận dụng dễ dàng hơn các 
+khả năng xử lý song song của môi trường đa lõi, đặc biệt là liên quan đến xử lý các 
+hoạt động theo kiểu for-each, và giao diện dòng dữ liệu mới (stream API), hỗ trợ các 
+hoạt động xử lý dữ liệu theo chuỗi. Việc thêm biểu thức lambda cũng đã tạo động lực 
+cho các tính năng Java mới khác, bao gồm phương thức mặc định (được mô tả trong Chương 9), 
+cho phép bạn xác định hành vi mặc định cho một phương thức của giao diện, 
+và tham chiếu phương thức (được mô tả ở đây), cho phép bạn tham chiếu đến một phương 
+thức mà không thực hiện nó.
+
+Kết luận cuối cùng, tương tự như generics đã thay đổi Java cách đây vài năm, 
+biểu thức lambda tiếp tục thay đổi Java ngày nay. Đơn giản nói, biểu thức lambda 
+sẽ ảnh hưởng đến hầu hết các lập trình viên Java. Chúng thực sự quan trọng đến vậy.
