@@ -1,8 +1,0 @@
-Ở phần tạo một thread bằng cách kế thừa từ lớp Thread này về bản chất thì cũng giống như là implements Runable
-Chỉ khác về cú pháp một chút cụ thể như sau: 
-
-Trong cách làm thứ hai để tạo một thread, bạn sẽ tạo một lớp mới kế thừa từ lớp Thread, 
-sau đó tạo một thể hiện của lớp đó. Lớp mở rộng này phải ghi đè phương thức run( ), 
-đây là điểm bắt đầu cho thread mới. Giống như trước, gọi start( ) để bắt đầu thực thi của thread mới. 
-Đây là chương trình trước đó được viết lại để mở rộng từ lớp Thread: file ExtendingThread.java
-

@@ -1,6 +1,0 @@
-param - parameter : tham số
-meth  - method    : phương thức
-ret   - return    : trả về
-arg   - argument  : đối số
-cons  - constructor : hàm tạo
-val   - value     : giá trị

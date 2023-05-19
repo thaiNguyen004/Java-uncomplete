@@ -1,3 +1,0 @@
-- Điều này cho phép chúng ta tạo ra một loại enum mà mỗi giá trị có thể có các thuộc tính và phương thức riêng của nó, 
-và các giá trị có thể được sử dụng như các đối tượng độc lập với nhau. Ví dụ trên chỉ là một ví dụ đơn giản của Enums with Abstract Methods, 
-và chúng ta có thể tạo ra các enum phức tạp hơn với nhiều phương thức và thuộc tính khác nhau.

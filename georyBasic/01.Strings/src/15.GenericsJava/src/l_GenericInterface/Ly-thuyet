@@ -1,4 +1,0 @@
-Ngoài các lớp và phương thức có kiểu chung, bạn cũng có thể tạo các giao diện có kiểu chung. 
-Các giao diện kiểu chung được chỉ định tương tự như các lớp kiểu chung. Dưới đây là một ví dụ. 
-Nó tạo ra một giao diện gọi là MinMax khai báo phương thức min() và max(), dự kiến trả về giá trị 
-tối thiểu và tối đa của một tập hợp các đối tượng. example.java
